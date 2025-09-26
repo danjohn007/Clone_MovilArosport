@@ -7,6 +7,7 @@ import CustomButton from '../Buttons';
 import JugadoresModal from '../../modales/Jugadores';
 import HistorialTresSets from '../../modales/HistorialTresSets';
 import RetaParejasVS from '../RetaParejasVS';
+import colors from '../../styles/colors';
 
 const Reta = ({ juego }) => {  
   const [juegosActivos, setJuegosActivos] = useState([]);
@@ -1129,7 +1130,7 @@ const prepareScoreData = (idJuego, canchaIndex) => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#8D288E" />
+        <ActivityIndicator size="large" color={colors.purple} />
       </View>
     );
   }
@@ -1187,10 +1188,10 @@ const styles = StyleSheet.create({
   },
   savingText: {
     marginLeft: 10,
-    color: '#8D288E',
+    color: colors.purple,
   },
   container: {
-    backgroundColor: "#2e2e2e",
+    backgroundColor: colors.backgroundDark,
     flex: 1,
     width: "100%",
   },
@@ -1202,7 +1203,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#2e2e2e",
+    backgroundColor: colors.backgroundDark,
   },
   juegoContainer: {
     width: '100%',
@@ -1213,7 +1214,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   sinCancha: {
-    color: "#fff",
+    color: colors.white,
     fontSize: 14,
     marginTop: 10,
   },

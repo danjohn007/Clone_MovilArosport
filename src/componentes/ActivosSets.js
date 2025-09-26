@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import colors from "../styles/colors";
 
 const HistorialPartidos = ({ title, dateTime, players, scores }) => {
   return (
@@ -27,7 +28,7 @@ const HistorialPartidos = ({ title, dateTime, players, scores }) => {
                         source={player.image}
                       />
                     ) : (
-                      <Icon name="person" size={28.75} color="#000" /> // 15% más grande
+                      <Icon name="person" size={28.75} color={colors.black} /> // 15% más grande
                     )}
                     <Text style={styles.fran2}>{player.name}</Text>
                   </View>
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
     height: 20.7, 
     display: "flex",
     fontFamily: "Inter-SemiBold",
-    color: "#000",
+    color: colors.black,
     fontWeight: "600",
     letterSpacing: 0,
     textAlign: "left",
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
   },
   fran2: {
     fontFamily: "Inter-SemiBold",
-    color: "#000",
+    color: colors.black,
     fontSize: 9.2, 
     alignSelf: "stretch",
     textAlign: "center",
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
     top: -9.2,
     left: 46, 
     fontSize: 10.35, 
-    color: "#000",
+    color: colors.black,
     letterSpacing: 0,
     position: "absolute",
   },
@@ -174,11 +175,11 @@ const styles = StyleSheet.create({
   },
   partidosWrapper: {
     borderRadius: 23, 
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     width: 251.85, 
     padding: 3.45, 
     borderWidth: 3.45, 
-    borderColor: "#fff",
+    borderColor: colors.white,
     alignItems: "center",
     flexDirection: "row",
     borderStyle: "solid",
@@ -192,7 +193,7 @@ const styles = StyleSheet.create({
   homeTypo: {
     fontFamily: "Inter-Bold",
     fontWeight: "700",
-    color: "#fff",
+    color: colors.white,
   },
   frameWrapperLayout: {
     width: 262.2, 
@@ -202,11 +203,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10.35, 
     paddingHorizontal: 11.5, 
     justifyContent: "flex-end",
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     borderRadius: 12.65, 
     borderWidth: 3.45, 
     borderStyle: "solid",
-    backgroundColor: "#fff",
+    backgroundColor: colors.white,
     alignItems: "center",
     width: 262.2,
     left: 0,
