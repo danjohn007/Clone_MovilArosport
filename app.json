@@ -1,0 +1,97 @@
+{
+  "expo": {
+    "name": "Arosports",
+    "slug": "arosports",
+    "version": "1.0.7",
+    "orientation": "portrait",
+    "icon": "./assets/arosports.jpg",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#2E2E2E"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/7673315a-e671-4bfa-bfec-c71705df4bc5"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "arosports.app",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "config": {
+        "googleMapsApiKey": "AIzaSyCI78o_JODtkwvB7ydLkvU-GCHwdOT8qv8"
+      },
+      "buildNumber": "7",
+      "infoPlist": {
+        "NSLocationUsageDescription": "Requerimos permisos para acceder a tu ubicación y poder mostrar información de acuerdo al lugar donde estas.",
+        "NSLocationWhenInUsageDescription": "Para poder visualizar banners, clubs de tu mismo estado y pais, necesitamos acceder a tu ubicación actual mientras usas la aplicación.",
+        "NSCameraUsageDescription": "Necesitamos permiso para usar tu cámara y tomar una foto de perfil si lo deseas.",
+        "UIBackgroundModes": [
+          "remote-notification",
+          "remote-notification"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/arosports.jpg",
+        "backgroundColor": "#2E2E2E"
+      },
+      "package": "arosports.app",
+      "versionCode": 7,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCI78o_JODtkwvB7ydLkvU-GCHwdOT8qv8"
+        }
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          },
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permitir que $(PRODUCT_NAME) acceda a tu ubicación."
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      "expo-localization",
+      "expo-notifications",
+      "expo-font"
+    ],
+    "owner": "impactos-digitales",
+    "extra": {
+      "eas": {
+        "projectId": "7673315a-e671-4bfa-bfec-c71705df4bc5"
+      }
+    }
+  }
+}

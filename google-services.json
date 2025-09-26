@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234548754338",
+    "project_id": "arosports-3bcf3",
+    "storage_bucket": "arosports-3bcf3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234548754338:android:505ca2678173aeb7ab24fb",
+        "android_client_info": {
+          "package_name": "arosports.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuTfqzyzhaZfDGqqqN0J1I_vKqrhpdmzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
