@@ -15,6 +15,7 @@ import {
 import { AntDesign, Ionicons } from "@expo/vector-icons";
 import GameInfoModal from "./GameInfoModal";
 import APIManager from "./API/APIManager";
+import colors from "../styles/colors";
 
 const GameFilter = ({ selectedGameModeId, setSelectedGameModeId }) => {
   const [gameTypes, setGameTypes] = useState([]);
@@ -54,7 +55,7 @@ const GameFilter = ({ selectedGameModeId, setSelectedGameModeId }) => {
   };
 
   if (loading) {
-    return <ActivityIndicator size="large" color="#888" />;
+    return <ActivityIndicator size="large" color={colors.textMuted} />;
   }
 
   return (
@@ -67,7 +68,7 @@ const GameFilter = ({ selectedGameModeId, setSelectedGameModeId }) => {
         <Ionicons
           name="tennisball-outline"
           size={24}
-          color="#02B9FA"
+          color={colors.primaryLight}
           style={{ marginRight: 10 }}
         />
         <Text style={styles.cardText}>
@@ -143,10 +144,10 @@ const styles = StyleSheet.create({
   },
   gameTypeCard: {
     flexDirection: "row",
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primaryLight,
     marginBottom: 10,
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -157,7 +158,7 @@ const styles = StyleSheet.create({
   },
   cardText: {
     fontSize: 14,
-    color: "#808191",
+    color: colors.textMuted,
     flex: 1,
   },
   modalContainer: {
@@ -169,10 +170,10 @@ const styles = StyleSheet.create({
   modalContent: {
     width: "85%",
     maxHeight: "70%",
-    backgroundColor: "#fff",
+    backgroundColor: colors.white,
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primaryLight,
     padding: 20,
   },
   modalTitle: {
@@ -180,7 +181,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 20,
-    color: "#02B9FA",
+    color: colors.primaryLight,
   },
   pillsScrollView: {
     maxHeight: 300,
@@ -192,7 +193,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   pill: {
-    backgroundColor: "#f0f0f0",
+    backgroundColor: colors.backgroundMuted,
     borderRadius: 16,
     paddingVertical: 10,
     paddingHorizontal: 15,
@@ -201,30 +202,30 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: colors.borderDark,
   },
   selectedPill: {
-    backgroundColor: "#02B9FA",
-    borderColor: "#02B9FA",
+    backgroundColor: colors.primaryLight,
+    borderColor: colors.primaryLight,
   },
   pillText: {
     fontSize: 14,
-    color: "#808191",
+    color: colors.textMuted,
     textAlign: "center",
   },
   selectedPillText: {
-    color: "#fff",
+    color: colors.white,
     fontWeight: "bold",
   },
   closeButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primaryLight,
     borderRadius: 8,
     paddingVertical: 10,
     alignItems: "center",
     marginTop: 15,
   },
   closeButtonText: {
-    color: "#fff",
+    color: colors.white,
     fontSize: 16,
     fontWeight: "bold",
   },

@@ -18,6 +18,7 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import TieBreakRonda from "../modales/TieBreakRonda";
 import { Ionicons } from "@expo/vector-icons";
+import colors from "../styles/colors";
 
 const ParejasSeisLoco = ({
   jugador1,
@@ -594,7 +595,7 @@ const ParejasSeisLoco = ({
     const errores = validarSet(parseInt(setNumber), scores[0], scores[1]);
     // Solo resaltar si hay errores en este set
     if (errores && errores.length > 0) {
-      return { borderColor: "#ff4444", borderWidth: 2 };
+      return { borderColor: colors.error, borderWidth: 2 };
     }
     return {};
   };
@@ -761,22 +762,22 @@ const styles = StyleSheet.create({
   boardContainer: {
     top: "13.9%",
     borderRadius: 16.1,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     height: "117.3%",
     borderWidth: 3.45,
     width: "100%",
     left: 0,
     borderStyle: "solid",
-    backgroundColor: "#fff",
+    backgroundColor: colors.white,
     position: "absolute",
     marginBottom: "3%",
   },
   gameTitle: {
     fontSize: 12.65,
     fontFamily: "Poppins-Bold",
-    color: "#fff",
+    color: colors.white,
     fontWeight: "700",
-    backgroundColor: "#02b9fa",
+    backgroundColor: colors.primaryLight,
     borderRadius: 17.25,
     paddingVertical: 6,
     paddingHorizontal: 40,
@@ -789,7 +790,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     position: "relative",
     borderWidth: 3,
-    borderColor: "#fff",
+    borderColor: colors.white,
     height: "42.4%",
     width: "78.5%",
   },
@@ -809,7 +810,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   playerUpperText: {
-    color: "#333",
+    color: colors.textSecondary,
     fontFamily: "Poppins-SemiBold",
     fontSize: 16,
     fontWeight: "600",
@@ -817,7 +818,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   playerLowerText: {
-    color: "#333",
+    color: colors.textSecondary,
     fontFamily: "Poppins-SemiBold",
     fontSize: 16,
     fontWeight: "600",
@@ -825,7 +826,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   totalScoreContainer: {
-    backgroundColor: "#f0faff",
+    backgroundColor: colors.lightBlue,
     borderRadius: 10,
     paddingHorizontal: 14,
     paddingVertical: 4,
@@ -836,14 +837,14 @@ const styles = StyleSheet.create({
   totalTeamScore: {
     fontSize: 18,
     fontFamily: "Poppins-Bold",
-    color: "#02b9fa",
+    color: colors.primaryLight,
     fontWeight: "700",
     textAlign: "center",
   },
   vsTextCentered: {
     top: -60,
     fontSize: 28.75,
-    color: "#000",
+    color: colors.black,
     fontFamily: "Poppins-SemiBold",
     textAlign: "center",
     fontWeight: "600",
