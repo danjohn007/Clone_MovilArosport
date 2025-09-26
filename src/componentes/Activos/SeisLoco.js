@@ -18,6 +18,7 @@ import HistorialPuntos from "../../modales/HistorialPuntos";
 import AmericanaMatch from "./Americana/AmericanaMatch";
 import PendientesEnJugar from "../PendientesEnJugar";
 import { useAuth } from "../../screens/Auth/AuthContext";
+import colors from '../../styles/colors';
 import {
   fetchJugadoresJuego,
   terminarJuego,
@@ -1435,7 +1436,7 @@ const SeisLoco = ({ juego, onTerminarJuego }) => {
 
         {esperandoCreador ? (
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#FFF" />
+            <ActivityIndicator size="large" color={colors.white} />
             <Text style={styles.loadingText}>Cargando...</Text>
           </View>
         ) : !jugadasRegistradas ? (
@@ -1542,7 +1543,7 @@ const SeisLoco = ({ juego, onTerminarJuego }) => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#8D288E" />
+        <ActivityIndicator size="large" color={colors.purple} />
       </View>
     );
   }
@@ -1706,7 +1707,7 @@ const SeisLoco = ({ juego, onTerminarJuego }) => {
       <Modal transparent={true} animationType="fade" visible={modalCargando}>
         <View style={styles.loadingOverlay}>
           <View style={styles.loadingModal}>
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primaryLight} />
             <Text style={styles.loadingText}>Terminando el juego...</Text>
           </View>
         </View>
@@ -1715,7 +1716,7 @@ const SeisLoco = ({ juego, onTerminarJuego }) => {
       <Modal transparent={true} animationType="fade" visible={loading2}>
         <View style={styles.loadingOverlay}>
           <View style={styles.loadingModal}>
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primaryLight} />
             <Text style={styles.loadingText}>Guardando ronda...</Text>
           </View>
         </View>
@@ -1725,7 +1726,7 @@ const SeisLoco = ({ juego, onTerminarJuego }) => {
 };
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#2e2e2e",
+    backgroundColor: colors.backgroundDark,
     flex: 1,
     width: "100%",
   },
@@ -1739,7 +1740,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#2e2e2e",
+    backgroundColor: colors.backgroundDark,
     marginTop: 5,
   },
   //este es el que da error en el estilo
@@ -1751,7 +1752,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   sinCancha: {
-    color: "#fff",
+    color: colors.white,
     fontSize: 14,
     marginTop: 10,
   },
@@ -1772,32 +1773,32 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   buttonJugadores: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primaryLight,
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 16,
     borderWidth: 2,
-    borderColor: "white",
+    borderColor: colors.white,
     marginRight: 5,
     flex: 1,
   },
   buttonHistorial: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primaryLight,
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 16,
     borderWidth: 2,
-    borderColor: "white",
+    borderColor: colors.white,
     marginLeft: 5,
     flex: 1,
   },
   buttonText: {
-    color: "#fff",
+    color: colors.white,
     textAlign: "center",
     fontWeight: "bold",
   },
   noJuegosText: {
-    color: "#fff",
+    color: colors.white,
     fontSize: 18,
     textAlign: "center",
     marginTop: -10,
@@ -1808,37 +1809,37 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingHorizontal: 10,
     paddingVertical: 8,
-    backgroundColor: "#FFF",
+    backgroundColor: colors.white,
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#00BAFF",
+    borderColor: colors.primary,
     width: "90%"
   },
   pendientesTitulo: {
     fontWeight: "bold",
     fontSize: 16,
     marginBottom: 6,
-    color: "#00BAFF",
+    color: colors.primary,
     textAlign: "center",
     textTransform: "uppercase",
   },
   pendienteSubTitulo: {
     fontSize: 12,
     marginBottom: 4,
-    color: "#838080",
+    color: colors.darkGray,
     textAlign: "center",
     fontStyle: "italic",
   },
   pendienteItem: {
     paddingVertical: 3,
     paddingHorizontal: 10,
-    backgroundColor: "#00BAFF",
+    backgroundColor: colors.primary,
     borderRadius: 8,
     marginBottom: 4,
   },
   pendienteText: {
     fontSize: 14,
-    color: "#FFF",
+    color: colors.white,
     textAlign: "center",
   },
   //estilos de loading
@@ -1849,7 +1850,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   loadingModal: {
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     padding: 24,
     borderRadius: 12,
     alignItems: "center",
@@ -1858,7 +1859,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: "#02B9FA",
+    color: colors.primaryLight,
     fontWeight: "500",
   },
 });

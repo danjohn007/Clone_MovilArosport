@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Text, StyleSheet, View } from "react-native";
 import Porcentaje from "../componentes/Porcentaje";
+import colors from "../styles/colors";
 
 const Estadisticas = () => {
   	
@@ -57,11 +58,11 @@ const styles = StyleSheet.create({
   },
 	partidosWrapper: {
 		borderRadius: 23, 
-		backgroundColor: "#00baff",
+		backgroundColor: colors.primary,
 		width: 251.85, 
 		padding: 3.45, 
 		borderWidth: 3.45, 
-		borderColor: "#fff",
+		borderColor: colors.white,
 		alignItems: "center",
 		flexDirection: "row",
 		borderStyle: "solid",
@@ -77,14 +78,14 @@ const styles = StyleSheet.create({
         letterSpacing: 0,
         fontWeight: "700",
         fontFamily: "Inter-Bold",
-        color: "#fff",
+        color: colors.white,
         textAlign: "left"
         },
 	estadsticasDeLosResultadosParent: {
         borderRadius: 23, 
-        backgroundColor: "#00baff",
+        backgroundColor: colors.primary,
         borderStyle: "solid",
-        borderColor: "#fff",
+        borderColor: colors.white,
         borderWidth: 3.45, 
         flex: 1,
         width: "100%",
@@ -101,13 +102,13 @@ const styles = StyleSheet.create({
   	},
   	textTypo: {
     		textAlign: "left",
-    		color: "#000",
+    		color: colors.black,
     		fontFamily: "Inter-SemiBold",
     		fontWeight: "600",
     		letterSpacing: 0
   	},
   	text1Typo: {
-    		color: "#00baff",
+    		color: colors.primary,
     		textAlign: "left",
     		fontFamily: "Inter-SemiBold",
     		fontWeight: "600",

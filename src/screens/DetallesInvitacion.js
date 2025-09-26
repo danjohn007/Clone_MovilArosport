@@ -3,6 +3,8 @@ import React from 'react';
 import Titulo from '../componentes/Titulo'; // Asegúrate de que la ruta sea correcta
 import Logo from '../componentes/Logo';  // Importa el componente Logo
 import CardDetallesInvitacion from '../componentes/CardDetallesInvitacion';
+import colors from '../styles/colors';
+import commonStyles from '../styles/styles';
 
 const DetallesInvitacion = () => {
   const handleAceptar = () => {
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, 
     padding: 16,
-    backgroundColor: '#2E2E2E',
+    backgroundColor: colors.backgroundDark,
   },
   center: {
     alignItems: 'center', 
