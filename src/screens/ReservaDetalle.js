@@ -520,7 +520,7 @@ const ReservaDetalle = ({ route, navigation }) => {
       <Modal transparent={true} animationType="fade" visible={loading2}>
         <View style={styles.modalContainer2}>
           <View style={styles.modalContent2}>
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>Procesando reservación...</Text>
           </View>
         </View>
@@ -540,7 +540,7 @@ const ReservaDetalle = ({ route, navigation }) => {
           <Ionicons
             name="time-outline"
             size={24}
-            color="#00baff"
+            color={colors.primary}
             style={{ marginRight: 10 }}
           />
           <Text style={styles.inputHorarioText}>
@@ -559,19 +559,19 @@ const ReservaDetalle = ({ route, navigation }) => {
           </View>
           <View style={styles.summaryContentPH}>
             <View style={styles.detailRowPH}>
-              <Ionicons name="calendar-outline" size={16} color="#00baff" />
+              <Ionicons name="calendar-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabelPH}>Fecha:</Text>
               <Text style={styles.detailValuePH}>{selectedDate}</Text>
             </View>
             <View style={styles.detailRowPH}>
-              <Ionicons name="tennisball-outline" size={16} color="#00baff" />
+              <Ionicons name="tennisball-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabelPH}>Cancha:</Text>
               <Text style={styles.detailValuePH}>
                 {horarioSeleccionado?.cancha || "---"}
               </Text>
             </View>
             <View style={styles.detailRowPH}>
-              <Ionicons name="time-outline" size={16} color="#00baff" />
+              <Ionicons name="time-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabelPH}>Horario:</Text>
               <Text style={styles.detailValuePH}>
                 {horarioSeleccionado
@@ -582,7 +582,7 @@ const ReservaDetalle = ({ route, navigation }) => {
               </Text>
             </View>
             <View style={styles.detailRowPH}>
-              <Ionicons name="timer-outline" size={16} color="#00baff" />
+              <Ionicons name="timer-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabelPH}>Duración:</Text>
               <Text style={styles.detailValuePH}>
                 {horarioSeleccionado
@@ -591,7 +591,7 @@ const ReservaDetalle = ({ route, navigation }) => {
               </Text>
             </View>
             <View style={styles.detailRowPH}>
-              <Ionicons name="pricetag-outline" size={16} color="#00baff" />
+              <Ionicons name="pricetag-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabelPH}>Precio:</Text>
               <Text style={styles.detailValuePH}>
                 {horarioSeleccionado
@@ -645,7 +645,7 @@ const ReservaDetalle = ({ route, navigation }) => {
                 style={stylesHPP.closeButtonHeader}
                 onPress={() => setModalHorarioVisible(false)}
               >
-                <Ionicons name="close" size={24} color="#00baff" />
+                <Ionicons name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
             <View style={stylesHPP.tableContainer}>
@@ -789,7 +789,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: "colors.primary",
   },
   inputHorario: {
     flexDirection: "row",
@@ -800,7 +800,7 @@ const styles = StyleSheet.create({
     height: 55,
     marginBottom: 15,
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   inputHorarioText: {
     color: "#838080",
@@ -831,12 +831,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#00baff",
+    borderBottomColor: "colors.primary",
   },
   modalTitlePH: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#00baff",
+    color: "colors.primary",
   },
   tableContainerPH: {
     paddingHorizontal: 15,
@@ -848,12 +848,12 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     paddingBottom: 8,
     borderBottomWidth: 1,
-    borderBottomColor: "#00baff",
+    borderBottomColor: "colors.primary",
   },
   tableHeaderCellPH: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#00baff",
+    color: "colors.primary",
     flex: 1,
     textAlign: "center",
   },
@@ -867,7 +867,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
   },
   selectedRowPH: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     borderRadius: 5,
   },
   tableCellPH: {
@@ -882,7 +882,7 @@ const styles = StyleSheet.create({
     padding: 15,
     marginTop: 15,
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   summaryHeaderPH: {
     flexDirection: "row",
@@ -896,7 +896,7 @@ const styles = StyleSheet.create({
   summaryTitlePH: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: "colors.primary",
   },
   summaryContentPH: {
     paddingHorizontal: 5,
@@ -922,7 +922,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     borderRadius: 10,
     paddingVertical: 12,
     marginTop: 15,
@@ -944,7 +944,7 @@ const styles = StyleSheet.create({
     width: "95%",
     maxWidth: 420,
     borderWidth: 3,
-    borderColor: "#00BAFF",
+    borderColor: "colors.primary",
     overflow: "hidden",
   },
   modalHeaderPH2: {
@@ -960,7 +960,7 @@ const styles = StyleSheet.create({
   modalTitlePH2: {
     fontSize: 17,
     fontWeight: "bold",
-    color: "#00BAFF",
+    color: "colors.primary",
     textTransform: "uppercase",
     flex: 1,
   },
@@ -979,7 +979,7 @@ const styles = StyleSheet.create({
   tableHeaderCellPH2: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#00BAFF",
+    color: "colors.primary",
     flex: 1,
     textAlign: "center",
   },
@@ -994,7 +994,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   selectedRowPH2: {
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
   },
   tableCellPH2: {
     fontSize: 14,
@@ -1022,7 +1022,7 @@ const stylesHPP = StyleSheet.create({
     width: "90%",
     maxHeight: "90%",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     padding: 0,
     overflow: "hidden",
   },
@@ -1038,7 +1038,7 @@ const stylesHPP = StyleSheet.create({
   modalTitle: {
     fontSize: 17,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
     textTransform: "uppercase",
@@ -1058,14 +1058,14 @@ const stylesHPP = StyleSheet.create({
   },
   tableGrid: {
     borderWidth: 1,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderRadius: 8,
     overflow: "hidden",
     backgroundColor: "#f8f9fa",
   },
   tableHeaderRow: {
     flexDirection: "row",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
   },
   headerCell: {
     paddingVertical: RFValue(14, 667),

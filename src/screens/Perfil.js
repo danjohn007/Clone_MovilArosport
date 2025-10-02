@@ -897,7 +897,7 @@ const styles = StyleSheet.create({
     marginTop: -10,
   },
   errorText: {
-    color: "#C70039",
+    color: "colors.error",
     fontSize: 12,
     marginTop: -5,
     marginBottom: 10,
@@ -914,7 +914,7 @@ const styles = StyleSheet.create({
     width: "80%",
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderRadius: 10,
     padding: 20,
     alignItems: "center",
@@ -937,7 +937,7 @@ const styles = StyleSheet.create({
   },
   modalCloseButton: {
     marginTop: 20,
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     borderRadius: 8,
     paddingVertical: 10,
     paddingHorizontal: 20,
@@ -952,7 +952,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   loginButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     width: 205,
     paddingVertical: 12,
     borderRadius: 30,

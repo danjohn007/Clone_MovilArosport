@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import Titulo from "../componentes/Titulo";
 import { Ionicons } from "@expo/vector-icons";
+import colors from "../styles/colors";
 
 const TieBreak2 = ({
   visible,
@@ -124,7 +125,7 @@ const TieBreak2 = ({
               <Text style={styles.titleText}>Tie-Break</Text>
             </View>
             <TouchableOpacity onPress={onClose}>
-              <Ionicons name="close" size={25} color="#02B9FA" />
+              <Ionicons name="close" size={25} color={colors.primary} />
             </TouchableOpacity>
           </View>
           <View style={styles.detailsContainer} >
@@ -170,7 +171,7 @@ const TieBreak2 = ({
                         style={styles.marcadorInput}
                         keyboardType="number-pad"
                         placeholder="0"
-                        placeholderTextColor="#00BAFF"
+                        placeholderTextColor={colors.primary}
                         value={puntajes[p.canchaIndex]?.pareja1 || ""}
                         onChangeText={(text) => {
                           const sanitized = text.replace(/[^0-5]/g, "").slice(0, 1);
@@ -186,7 +187,7 @@ const TieBreak2 = ({
                         style={styles.marcadorInput}
                         keyboardType="number-pad"
                         placeholder="0"
-                        placeholderTextColor="#00BAFF"
+                        placeholderTextColor={colors.primary}
                         value={puntajes[p.canchaIndex]?.pareja2 || ""}
                         onChangeText={(text) => {
                           const sanitized = text.replace(/[^0-5]/g, "").slice(0, 1);
@@ -201,7 +202,7 @@ const TieBreak2 = ({
                         <Ionicons
                           name="alert-circle-outline"
                           size={16}
-                          color="#C70039"
+                          color={colors.error}
                           style={{ marginRight: 5 }}
                         />
                         <Text style={styles.errorText}>
@@ -240,7 +241,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     borderRadius: 16,
     width: "90%",
     maxHeight: "80%",
@@ -296,7 +297,7 @@ const styles = StyleSheet.create({
     elevation: 2, // Sombra para Android
   },
   errorText: {
-    color: "#C70039",
+    color: colors.error,
     fontSize: 12,
     textAlign: "center",
     lineHeight: 16, 
@@ -339,7 +340,7 @@ const styles = StyleSheet.create({
   cancha: {
     fontSize: 13,
     fontWeight: "bold",
-    color: "#00BAFF",
+    color: colors.primary,
     textAlign: "center",
     marginBottom: 10,
     textTransform: "uppercase",
@@ -361,9 +362,9 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 16,
     backgroundColor: "#FFF",
-    color: "#00BAFF",
+    color: colors.primary,
     borderWidth: 1,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     fontSize: 20,
     textAlign: "center",
     marginHorizontal: 15,
@@ -385,7 +386,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 18,
-    color: "#02B9FA",
+    color: colors.primary,
     textTransform: "uppercase",
     textAlign: "center",
     fontWeight: "bold",
@@ -427,7 +428,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,

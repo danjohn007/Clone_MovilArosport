@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, StyleSheet, Modal, Text, TouchableOpacity, ScrollView } from 'react-native';
 import  {obtenerRondasAmericana} from '../componentes/Activos/Americana/AmericanaApiService.js';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import colors from "../styles/colors";
 
 const HistorialAmericanaPuntos = ({ visible, closeModal, juegoId, onTerminar }) => {
   console.log("id juego de historial", juegoId);
@@ -144,7 +145,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: 'white',
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     borderRadius: 15,
     padding: 20,
     width: '90%',
@@ -172,7 +173,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 10,
     paddingHorizontal: 15,
-    backgroundColor: '#00baff',
+    backgroundColor: colors.primary,
     borderRadius: 8,
     marginBottom: 8,
   },
@@ -198,7 +199,7 @@ const styles = StyleSheet.create({
   topPlayer: {
     backgroundColor: 'rgba(0, 186, 255, 0.2)',
     borderWidth: 1,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
   },
   playerName: {
     fontSize: 15,
@@ -235,7 +236,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
        btnCerrar: {
-      backgroundColor: '#02B9FA',
+      backgroundColor: colors.primary,
       padding: 12,
       borderRadius: 8,
       marginTop: 10,

@@ -42,12 +42,12 @@ const CardJugadaConfirmada = ({
       {/* Información detallada */}
       <View style={styles.infoContainer}>
         <View style={styles.infoRow}>
-          <Icon name="calendar-outline" size={16} color="#00baff" />
+          <Icon name="calendar-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{fecha}</Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Icon name="time-outline" size={16} color="#00baff" />
+          <Icon name="time-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{hora}</Text>
         </View>
 
@@ -55,7 +55,7 @@ const CardJugadaConfirmada = ({
         {confirmados && confirmados.length > 0 && (
           <View style={styles.confirmadosContainer}>
             <View style={styles.infoRow}>
-              <Icon name="people-outline" size={16} color="#00baff" />
+              <Icon name="people-outline" size={16} color={colors.primary} />
               <Text style={styles.infoText}>Asistencia confirmada:</Text>
             </View>
             {confirmados.map((confirmado, index) => (
@@ -65,7 +65,7 @@ const CardJugadaConfirmada = ({
                 onPress={() => onViewInfo(confirmado.id_jugador, id_juego, "confirmados")}
                 activeOpacity={0.7}
               >
-                <Icon name="checkmark" size={14} color="#00baff" style={styles.icon} />
+                <Icon name="checkmark" size={14} color={colors.primary} style={styles.icon} />
                 <Text style={styles.confirmadoText}>
                   {confirmado.us_nombre} ({confirmado.us_nomUsuario})
                 </Text>
@@ -78,7 +78,7 @@ const CardJugadaConfirmada = ({
         {pendientes && pendientes.length > 0 && (
           <View style={styles.confirmadosContainer}>
             <View style={styles.infoRow}>
-              <Icon name="people-outline" size={16} color="#00baff" />
+              <Icon name="people-outline" size={16} color={colors.primary} />
               <Text style={styles.infoText}>Pendientes de confirmar:</Text>
             </View>
             {pendientes.map((pendiente, index) => (
@@ -88,7 +88,7 @@ const CardJugadaConfirmada = ({
                 onPress={() => onViewInfo(pendiente.id_jugador, id_juego, "pendientes")}
                 activeOpacity={0.7}
               >
-                <Icon name="timer-outline" size={14} color="#00baff" style={styles.icon} />
+                <Icon name="timer-outline" size={14} color={colors.primary} style={styles.icon} />
                 <Text style={styles.confirmadoText}>
                   {pendiente.us_nombre} ({pendiente.us_nomUsuario})
                 </Text>
@@ -101,7 +101,7 @@ const CardJugadaConfirmada = ({
         {solicitudes && solicitudes.length > 0 && (
           <View style={styles.confirmadosContainer}>
             <View style={styles.infoRow}>
-              <Icon name="people-outline" size={16} color="#00baff" />
+              <Icon name="people-outline" size={16} color={colors.primary} />
               <Text style={styles.infoText}>Solicitudes pendientes:</Text>
             </View>
             {solicitudes.map((solicitud, index) => (
@@ -114,7 +114,7 @@ const CardJugadaConfirmada = ({
                 <Icon
                   name="information-circle-outline"
                   size={14}
-                  color="#00baff"
+                  color={colors.primary}
                   style={styles.icon}
                 />
                 <Text style={styles.confirmadoText}>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   invitacionContainer: {
     backgroundColor: "#ffffff",
     width: "95%",
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
     alignSelf: "center",
     marginBottom: 16,
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   invitacionTitle: {
     fontSize: RFValue(14, 667),
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     flex: 1,
     marginRight: 10,
     marginTop: -15,

@@ -9,6 +9,7 @@ import  {fetchJugadoresJuego, verificarJugadoresAmericana} from '../componentes/
 import { useAuth } from '../screens/Auth/AuthContext.js';
 import { MaterialIcons } from '@expo/vector-icons';
 import Categorias from '../componentes/Categorias.js';
+import colors from "../styles/colors";
 
 
   const BASE_ICON = require('../../assets/icon_no_profile.png');
@@ -505,7 +506,7 @@ const JugadoresParejas = ({
         <Text style={styles.resultadoTexto}>
           {item.nombre_completo || ""} ({item.usuario || ""})
         </Text>
-        <Icon name="add-circle" size={24} color="#02B9FA" />
+        <Icon name="add-circle" size={24} color={colors.primary} />
       </TouchableOpacity>
     );
   };
@@ -676,12 +677,12 @@ const JugadoresParejas = ({
                 {searchTerm.trim() !== "" &&
                   (buscando ? (
                     <View style={styles.addIcon}>
-                      <ActivityIndicator size="small" color="#02B9FA" />
+                      <ActivityIndicator size="small" color={colors.primary} />
                     </View>
                   ) : (
                     <TouchableOpacity onPress={() => handleAgregarJugador({})}>
                       <View style={styles.addIcon}>
-                        <Icon name="add-circle" size={24} color="#02B9FA" />
+                        <Icon name="add-circle" size={24} color={colors.primary} />
                       </View>
                     </TouchableOpacity>
                   ))}
@@ -710,7 +711,7 @@ const JugadoresParejas = ({
             {loadingJugadores ? (
               <ActivityIndicator
                 size="large"
-                color="#02B9FA"
+                color={colors.primary}
                 style={{ marginTop: 20 }}
               />
             ) : (
@@ -939,7 +940,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 10,
     borderRadius: 10,
   },
@@ -1004,7 +1005,7 @@ const styles = StyleSheet.create({
   },
   jugador1: {
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
   },
   jugador2: {
     borderWidth: 3,
@@ -1099,21 +1100,21 @@ const styles = StyleSheet.create({
   },
   addIcon: {
     fontSize: 22,
-    color: "#02B9FA",
+    color: colors.primary,
     paddingHorizontal: -5,
   },
   modalContainer2: {
     flex: 1,
     // backgroundColor: "rgba(0, 0, 0, 0.5)",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent2: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     padding: 24,
     borderRadius: 10,
     alignItems: "center",
@@ -1122,7 +1123,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: colors.primary,
   },
   //estilos cartas jugadores
   jugadorCard: {
@@ -1190,7 +1191,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: "#02B9FA",
+    color: colors.primary,
     fontWeight: "500",
   },
   //estilos parejas
@@ -1210,7 +1211,7 @@ const styles = StyleSheet.create({
     opacity: 0.9,
     elevation: 10,
     backgroundColor: "#f0f8ff",
-    shadowColor: "#02B9FA",
+    shadowColor: colors.primary,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
@@ -1245,7 +1246,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     textAlign: "center",
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 8,
     borderRadius: 16,
     width: "90%",
@@ -1259,7 +1260,7 @@ const styles = StyleSheet.create({
   },
   primeraPareja: {
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
   },
   segundaPareja: {
     borderWidth: 3,

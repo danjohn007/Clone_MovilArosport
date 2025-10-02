@@ -21,13 +21,13 @@ const styles = StyleSheet.create({
   	cardContainer: {
     		borderRadius: 15,
     		backgroundColor: "#fff",
-    		borderColor: "#00baff",
+    		borderColor: "colors.primary",
     		borderWidth: 3.5,
     		padding: 15,
     		width: 300,
   	},
   	header: {
-    		backgroundColor: "#00baff",
+    		backgroundColor: "colors.primary",
     		borderRadius: 20,
     		paddingVertical: 8,
     		alignItems: "center",

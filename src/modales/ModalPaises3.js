@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import countries from '../../assets/countries.json';
 import states from '../../assets/states.json';
+import colors from "../styles/colors";
 
 const ModalPaises3 = ({ visible, onClose, onSelectPaisEstado, pais, estado }) => {
   const [paises, setPaises] = useState([]);
@@ -199,7 +200,7 @@ const styles = StyleSheet.create({
       width: '90%',
       height: '80%',
         borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
       backgroundColor: '#fff',
       borderRadius: 16,
       padding: 20,
@@ -239,7 +240,7 @@ const styles = StyleSheet.create({
     },
     textoSeleccionado: {
       fontWeight: 'bold',
-      color: '#02B9FA',
+      color: colors.primary,
     },
     textoNormal: {
       color: '#333',
@@ -250,7 +251,7 @@ const styles = StyleSheet.create({
       borderColor: '#ccc',
     },
     btnCerrar: {
-      backgroundColor: '#02B9FA',
+      backgroundColor: colors.primary,
       padding: 12,
       borderRadius: 8,
       marginTop: 10,

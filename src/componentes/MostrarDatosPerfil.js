@@ -33,7 +33,7 @@ const MostrarDatosPerfil = forwardRef(
       >
 
         <View style={[styles.inputBox]}>
-          <Ionicons name={iconName} size={24} color="#02B9FA" style={styles.icon} />
+          <Ionicons name={iconName} size={24} color={colors.primary} style={styles.icon} />
 
           {isButton ? (
             <Text
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     marginBottom: 10,
     paddingHorizontal: 10,
     paddingVertical:5,

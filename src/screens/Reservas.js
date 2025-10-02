@@ -361,7 +361,7 @@ const obtenerClubsDisponibles = async () => {
           <Ionicons
             name="location-outline"
             size={24}
-            color="#02B9FA"
+            color={colors.primary}
             style={styles.icon}
           />
           <Text style={styles.textInput}>
@@ -464,7 +464,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     padding: 15,
     marginTop: 15,
     alignSelf: "center",
@@ -549,7 +549,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 16, // Cambiado de 10 a 16
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     paddingVertical: 10,
     paddingHorizontal: 15,
     width: "100%",
@@ -567,7 +567,7 @@ const styles = StyleSheet.create({
   inputHalf: {
     flex: 1,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     borderRadius: 16, // Cambiado de 10 a 16
     paddingVertical: 15,
     paddingHorizontal: 15,

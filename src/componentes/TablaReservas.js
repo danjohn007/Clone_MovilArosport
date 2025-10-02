@@ -174,7 +174,7 @@ const TablaReservas = ({
               }}
               activeOpacity={0.7}
             >
-              <Ionicons name="close" size={24} color="#00baff" />
+              <Ionicons name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -213,7 +213,7 @@ const TablaReservas = ({
                     style={styles.clearFilterButton}
                     onPress={clearFilters}
                   >
-                    <Ionicons name="refresh" size={20} color="#00baff" />
+                    <Ionicons name="refresh" size={20} color={colors.primary} />
                   </TouchableOpacity>
                 )}
               </View>
@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   modalHeader: {
     flexDirection: "row",
@@ -518,7 +518,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
     marginRight: -28,
@@ -553,19 +553,19 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "bold",
     marginBottom: 8,
-    color: "#02B9FA",
+    color: "colors.primary",
     marginLeft: 2,
   },
   tablaContainer: {
     backgroundColor: "#fff",
     borderWidth: 1,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     borderRadius: 8,
     overflow: "hidden",
   },
   tableHeader: {
     flexDirection: "row",
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     paddingVertical: 12,
   },
   tableHeaderText: {
@@ -603,7 +603,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   errorMsg: {
-    color: "#c70039",
+    color: "colors.error",
     marginTop: 2,
     marginLeft: 8,
     fontSize: 13,
@@ -672,7 +672,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   miniModalOptionSelected: {
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     borderRadius: 16,
   },
   miniModalOptionUnselected: {

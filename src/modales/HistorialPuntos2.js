@@ -13,6 +13,7 @@ import { useAuth } from "../screens/Auth/AuthContext.js";
 import { obtenerHistorialPuntos, obtenerHistorialPuntosReta } from "../componentes/Activos/Americana/RetaApiService.js";
 import HistorialPartidos2 from "../componentes/HistorialPartidos2.js";
 import { AntDesign, Ionicons } from "@expo/vector-icons";
+import colors from "../styles/colors";
 
 const HistorialPuntos2 = ({
   visible,
@@ -137,7 +138,7 @@ const HistorialPuntos2 = ({
               style={styles.closeButtonHeader}
               onPress={closeModal}
             >
-              <Ionicons name="close" size={24} color="#00baff" />
+              <Ionicons name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -211,7 +212,7 @@ const styles = StyleSheet.create({
     width: "90%",
     maxHeight: "80%",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
   modalHeader: {
     flexDirection: "row",
@@ -227,7 +228,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
     textTransform: "uppercase",

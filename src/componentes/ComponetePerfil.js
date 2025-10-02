@@ -11,7 +11,7 @@ import { Dimensions } from "react-native";
 const { width } = Dimensions.get("window");
 const scale = (size) => (width / 375) * size;
 const colors = {
-  azulMarino: "#00baff",
+  azulMarino: "colors.primary",
   blanco: "#fff",
 };
 

@@ -313,18 +313,18 @@ const Eventos = () => {
             {item.nombre}
           </Text>
           <View style={styles.infoRow}>
-            <Icon name="location-outline" size={16} color="#00baff" />
+            <Icon name="location-outline" size={16} color={colors.primary} />
             <Text style={styles.torneoText}>{capitalizar(item.fracci)}</Text>
           </View>
           <View style={styles.infoRow}>
-            <Icon name="calendar-outline" size={16} color="#00baff" />
+            <Icon name="calendar-outline" size={16} color={colors.primary} />
             <Text style={styles.torneoText}>
               {formatearFecha(item.torneo_fecha)}
             </Text>
           </View>
         </View>
         <View style={styles.actionButton}>
-          <Icon name="arrow-forward-outline" size={20} color="#00baff" />
+          <Icon name="arrow-forward-outline" size={20} color={colors.primary} />
         </View>
       </View>
     </TouchableOpacity>
@@ -367,16 +367,16 @@ const Eventos = () => {
       </View>
       <View style={styles.infoContainer}>
         <View style={styles.infoRow}>
-          <Icon name="calendar-outline" size={16} color="#00baff" />
+          <Icon name="calendar-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{formatearFecha(item.fecha)}</Text>
         </View>
         <View style={styles.infoRow}>
-          <Icon name="time-outline" size={16} color="#00baff" />
+          <Icon name="time-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{formatearHora(item.horario)}</Text>
         </View>
         <TouchableOpacity onPress={() => fetchJugadorInfo(item.id_jugador)}>
           <View style={styles.infoRow}>
-            <Icon name="person-outline" size={16} color="#00baff" />
+            <Icon name="person-outline" size={16} color={colors.primary} />
             <Text style={styles.infoText}>
               Creado por {item.nombre_usuario}
             </Text>
@@ -429,8 +429,8 @@ const Eventos = () => {
                 <RefreshControl
                   refreshing={isRefreshing}
                   onRefresh={handleRefresh}
-                  colors={["#00baff"]}
-                  tintColor="#00baff"
+                  colors={["colors.primary"]}
+                  tintColor="colors.primary"
                 />
               }
             />
@@ -456,8 +456,8 @@ const Eventos = () => {
                 <RefreshControl
                   refreshing={isRefreshing}
                   onRefresh={handleRefresh}
-                  colors={["#00baff"]}
-                  tintColor="#00baff"
+                  colors={["colors.primary"]}
+                  tintColor="colors.primary"
                 />
               }
             />
@@ -551,7 +551,7 @@ const styles = StyleSheet.create({
   jugadaContainer: {
     backgroundColor: "#ffffff",
     width: "95%",
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
     alignSelf: "center",
     marginBottom: 16,
@@ -576,7 +576,7 @@ const styles = StyleSheet.create({
   jugadaTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     flex: 1,
     marginRight: 10,
     marginTop: -15,
@@ -589,7 +589,7 @@ const styles = StyleSheet.create({
   },
   joinButton: {
     flexDirection: "row",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     paddingVertical: 6,
     paddingHorizontal: 12,
     borderRadius: 20,
@@ -621,7 +621,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 16,
     backgroundColor: "#ffffff",
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
     borderRadius: 16,
     width: "95%",
@@ -652,7 +652,7 @@ const styles = StyleSheet.create({
   torneoNombre: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     marginBottom: 8,
   },
   torneoText: {

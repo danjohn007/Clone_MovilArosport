@@ -25,6 +25,7 @@ import {
 import { useAuth } from "../screens/Auth/AuthContext.js";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 import Categorias from "../componentes/Categorias.js";
+import colors from "../styles/colors";
 
 const BASE_ICON = require("../../assets/icon_no_profile.png");
 const BASE_URL = URL.IMAGENES;
@@ -274,7 +275,7 @@ const JugadoresAmericanaP = ({
                 style={styles.dragHandle}
                 hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
               >
-                <Icon name="reorder-three" size={20} color={esPrimeraParejaDeCancha ? "#02B9FA" : "#FF9500"} />
+                <Icon name="reorder-three" size={20} color={esPrimeraParejaDeCancha ? colors.primary : "#FF9500"} />
               </TouchableOpacity>
             )}
 
@@ -289,7 +290,7 @@ const JugadoresAmericanaP = ({
                     hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                     activeOpacity={0.7}
                   >
-                    <Icon name="person-remove" size={20} color="#C70039" />
+                    <Icon name="person-remove" size={20} color={colors.error} />
                   </TouchableOpacity>
                 )}
               </View>
@@ -571,7 +572,7 @@ const JugadoresAmericanaP = ({
         <Text style={styles.resultadoTexto}>
           {item.nombre_completo || ""} ({item.usuario || ""})
         </Text>
-        <Icon name="add-circle" size={24} color="#02B9FA" />
+        <Icon name="add-circle" size={24} color={colors.primary} />
       </TouchableOpacity>
     );
   };
@@ -743,7 +744,7 @@ const JugadoresAmericanaP = ({
               <Text style={styles.titleText}>Jugadores</Text>
             </View>
             <TouchableOpacity onPress={() => setModalVisible(false)}>
-              <Icon name="close" size={25} color="#02B9FA" />
+              <Icon name="close" size={25} color={colors.primary} />
             </TouchableOpacity>
           </View>
           <View style={styles.detailsContainer}>
@@ -774,7 +775,7 @@ const JugadoresAmericanaP = ({
                   {searchTerm.trim() !== "" &&
                     (buscando ? (
                       <View style={styles.addIcon}>
-                        <ActivityIndicator size="small" color="#02B9FA" />
+                        <ActivityIndicator size="small" color={colors.primary} />
                       </View>
                     ) : (
                       <TouchableOpacity
@@ -793,7 +794,7 @@ const JugadoresAmericanaP = ({
                         }}
                       >
                         <View style={styles.addIcon}>
-                          <Icon name="add-circle" size={24} color="#02B9FA" />
+                          <Icon name="add-circle" size={24} color={colors.primary} />
                         </View>
                       </TouchableOpacity>
                     ))}
@@ -834,10 +835,10 @@ const JugadoresAmericanaP = ({
                   <Ionicons
                     name="alert-circle-outline"
                     size={18}
-                    color="#C70039"
+                    color={colors.error}
                     style={{ marginRight: 5 }}
                   />
-                  <Text style={{ color: "#C70039", fontSize: 13 }}>
+                  <Text style={{ color: colors.error, fontSize: 13 }}>
                     Has alcanzado el límite de jugadores
                   </Text>
                 </View>
@@ -855,7 +856,7 @@ const JugadoresAmericanaP = ({
                         setLimitePuntos((prev) => Math.max(1, prev - 1));
                       }}
                     >
-                      <Icon name="remove" size={20} color="#02B9FA" />
+                      <Icon name="remove" size={20} color={colors.primary} />
                     </TouchableOpacity>
 
                     <TextInput
@@ -883,7 +884,7 @@ const JugadoresAmericanaP = ({
                         setLimitePuntos((prev) => Math.min(99, prev + 1))
                       }
                     >
-                      <Icon name="add" size={20} color="#02B9FA" />
+                      <Icon name="add" size={20} color={colors.primary} />
                     </TouchableOpacity>
                   </View>
                 </View>
@@ -893,7 +894,7 @@ const JugadoresAmericanaP = ({
               {loadingJugadores ? (
                 <ActivityIndicator
                   size="large"
-                  color="#02B9FA"
+                  color={colors.primary}
                   style={{ marginTop: 20 }}
                 />
               ) : !jugadasRegistradas && soyCreador ? (
@@ -954,14 +955,14 @@ const JugadoresAmericanaP = ({
                 }}
                 activeOpacity={0.7}
               >
-                <Icon name="close" size={24} color="#00baff" />
+                <Icon name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
             {/* Contenido */}
             <View style={styles.modalContentCustom}>
               <Text style={styles.sectionTitleCustom}>JUGADOR</Text>
               <View style={styles.inputContainerCustom}>
-                <Icon name="person-outline" size={18} color="#00baff" />
+                <Icon name="person-outline" size={18} color={colors.primary} />
                 <Text style={styles.playerNameCustom}>{nuevoNombreManual}</Text>
               </View>
               <Text style={styles.sectionTitleCustom}>CATEGORÍA</Text>
@@ -1072,7 +1073,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 10,
     borderRadius: 10,
   },
@@ -1150,7 +1151,7 @@ const styles = StyleSheet.create({
   },
   jugador1: {
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
   },
   jugador2: {
     borderWidth: 3,
@@ -1232,7 +1233,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1.1,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     borderRadius: 16,
     paddingHorizontal: 10,
     marginBottom: 10,
@@ -1245,21 +1246,21 @@ const styles = StyleSheet.create({
   },
   addIcon: {
     fontSize: 22,
-    color: "#02B9FA",
+    color: colors.primary,
     paddingHorizontal: -5,
   },
   modalContainer2: {
     flex: 1,
     // backgroundColor: "rgba(0, 0, 0, 0.5)",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent2: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     padding: 24,
     borderRadius: 10,
     alignItems: "center",
@@ -1268,7 +1269,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: colors.primary,
   },
   //estilos cartas jugadores
   jugadorCard: {
@@ -1332,7 +1333,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: "#02B9FA",
+    color: colors.primary,
     fontWeight: "500",
   },
   //estilos parejas
@@ -1383,7 +1384,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     textAlign: "center",
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 8,
     borderRadius: 16,
     width: "90%",
@@ -1393,7 +1394,7 @@ const styles = StyleSheet.create({
   },
   primeraPareja: {
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
   },
   segundaPareja: {
     borderWidth: 3,
@@ -1439,7 +1440,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 18,
-    color: "#02B9FA",
+    color: colors.primary,
     textTransform: "uppercase",
     textAlign: "center",
     fontWeight: "500",
@@ -1474,7 +1475,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8F9FA",
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     marginLeft: 10,
   },
   arrowButton: {
@@ -1487,7 +1488,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontSize: 18,
     fontWeight: "600",
-    color: "#02B9FA",
+    color: colors.primary,
   },
   // --- NUEVOS ESTILOS PARA EL MODAL DE AGREGAR JUGADOR MANUAL ---
   modalOverlayCustom: {
@@ -1505,7 +1506,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
   modalHeaderCustom: {
     flexDirection: "row",
@@ -1519,7 +1520,7 @@ const styles = StyleSheet.create({
   modalTitleCustom: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
   },
@@ -1533,7 +1534,7 @@ const styles = StyleSheet.create({
   sectionTitleCustom: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 8,
     textTransform: "uppercase",
   },
@@ -1567,7 +1568,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,

@@ -63,14 +63,14 @@ const minutes = [0, 15, 30, 45];
           }
         }}
       >
-        <Ionicons name={iconName} size={24} color="#02B9FA" style={styles.icon} />
+        <Ionicons name={iconName} size={24} color={colors.primary} style={styles.icon} />
         <Text style={styles.textInput}>{formatTimeDisplay(value)}</Text>
 
       <TouchableOpacity
         onPress={() => onChange(null)}
         style={{ marginLeft: 'auto', paddingLeft: 10 }}
       >
-        <Ionicons name="close-circle" size={20} color="#02B9FA" />
+        <Ionicons name="close-circle" size={20} color={colors.primary} />
       </TouchableOpacity>
  
 
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     paddingVertical: 10,
     paddingHorizontal: 15,
     width: '100%', // Cambiado para que sea coherente
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   modalContent: {
     backgroundColor: 'white',
       borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     padding: 20,
     borderRadius: 10,
     alignItems: 'center',
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
   modalButton: {
     flex: 1,
     padding: 10,
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     borderRadius: 5,
     alignItems: 'center',
     marginHorizontal: 5,
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins',
   },
   selectedScrollItemText: {
-    color: '#02B9FA',
+    color: colors.primary,
     fontWeight: 'bold',
   },
   timeSeparator: {
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   toggleButtonText: {
-    color: '#02B9FA',
+    color: colors.primary,
     fontFamily: 'Poppins',
   },
 });

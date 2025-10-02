@@ -196,7 +196,7 @@ const Notificaciones = () => {
         <Icon
           name="calendar-outline"
           size={28}
-          color={"#00baff"}
+          color={"colors.primary"}
           style={styles.juegoProximoIcon}
         />
         <View style={styles.notificationContent}>
@@ -216,7 +216,7 @@ const Notificaciones = () => {
         <Icon
           name="chevron-forward"
           size={24}
-          color={isLoading || !juegoProximo ? "#ccc" : "#00baff"}
+          color={isLoading || !juegoProximo ? "#ccc" : "colors.primary"}
           style={styles.chevronIcon}
         />
       </TouchableOpacity>
@@ -230,9 +230,9 @@ const Notificaciones = () => {
           <Ionicons
             name="checkbox-outline"
             size={24}
-            color={selectAll ? "#00baff" : "#fff"}
+            color={selectAll ? "colors.primary" : "#fff"}
           />
-          <Text style={[styles.actionText, { color: selectAll ? "#00baff" : "#fff" }]}>Seleccionar todo</Text>
+          <Text style={[styles.actionText, { color: selectAll ? "colors.primary" : "#fff" }]}>Seleccionar todo</Text>
         </TouchableOpacity>
         
         <TouchableOpacity
@@ -243,11 +243,11 @@ const Notificaciones = () => {
           <Ionicons 
             name="trash" 
             size={24} 
-            color={selectedNotifications.length > 0 ? "#00baff" : "#666"} 
+            color={selectedNotifications.length > 0 ? "colors.primary" : "#666"} 
           />
           <Text style={[
             styles.actionText,
-            { color: selectedNotifications.length > 0 ? "#00baff" : "#666" }
+            { color: selectedNotifications.length > 0 ? "colors.primary" : "#666" }
           ]}>
             Eliminar
           </Text>
@@ -298,14 +298,14 @@ const styles = StyleSheet.create({
     width: "94%",
     minHeight: 80,
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   juegoProximoIcon: {
     marginRight: 8,
     marginLeft: 12,
   },
   juegoProximoTitulo: {
-    color: "#00baff",
+    color: "colors.primary",
     fontWeight: "bold",
     fontSize: 16,
   },

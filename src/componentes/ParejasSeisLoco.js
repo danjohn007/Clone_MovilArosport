@@ -861,7 +861,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginVertical: 1,
-    backgroundColor: "#02b9fa",
+    backgroundColor: "colors.primary",
     borderRadius: 40,
     height: 40,
     paddingHorizontal: 20,
@@ -870,7 +870,7 @@ const styles = StyleSheet.create({
     width: "78.5%",
   },
   currentSetRow: {
-    backgroundColor: "#02b9fa",
+    backgroundColor: "colors.primary",
     top: -50,
   },
   setInfoContainer: {
@@ -888,7 +888,7 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
   currentSetIndicator: {
-    color: "#02b9fa",
+    color: "colors.primary",
     fontSize: 24,
     marginLeft: 4,
     lineHeight: 20,
@@ -903,7 +903,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   currentScoreInput: {
-    borderColor: "#02b9fa",
+    borderColor: "colors.primary",
     color: "white",
   },
   ganadoresText: {

@@ -207,15 +207,15 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 18,
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     alignItems: "center",
     justifyContent: "center",
     minWidth: 80,
     width: "100%",
   },
   pillSelected: {
-    backgroundColor: "#00baff",
-    borderColor: "#00baff",
+    backgroundColor: "colors.primary",
+    borderColor: "colors.primary",
   },
   pillTitle: {
     color: "#808191",
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   },
   selectedText: {
     marginTop: 6,
-    color: "#00baff",
+    color: "colors.primary",
     fontWeight: "bold",
     textAlign: "center",
     fontSize: RFValue(10, 667),

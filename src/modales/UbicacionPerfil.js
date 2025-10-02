@@ -16,6 +16,7 @@ import { obtenerDireccionFormateadaPerfil } from "../config/googleGeocoding";
 import APIManager from "../componentes/API/APIManager.jsx";
 import { obtenerEstadoYPaisDesdeCoordenadas } from "../config/googleGeocoding";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../styles/colors";
 
 const UbicacionPerfil = ({
   visible,
@@ -222,7 +223,7 @@ const UbicacionPerfil = ({
               onPress={closeModal}
               activeOpacity={0.7}
             >
-              <Icon name="close" size={24} color="#00baff" />
+              <Icon name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -232,7 +233,7 @@ const UbicacionPerfil = ({
             showsVerticalScrollIndicator={false}
           >
             {loading ? (
-              <ActivityIndicator size="large" color="#00baff" />
+              <ActivityIndicator size="large" color={colors.primary} />
             ) : ubicacion ? (
               <>
                 {modo === "jugada" && (
@@ -275,7 +276,7 @@ const UbicacionPerfil = ({
                   style={styles.currentLocationButton}
                   onPress={obtenerUbicacionActual}
                 >
-                  <Icon name="locate-outline" size={20} color="#00baff" />
+                  <Icon name="locate-outline" size={20} color={colors.primary} />
                   <Text style={styles.currentLocationText}>
                     {modo === "jugada" 
                       ? "Usar mi ubicación actual" 
@@ -334,7 +335,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
   modalHeader: {
     flexDirection: "row",
@@ -348,7 +349,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
   },
@@ -365,7 +366,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 8,
     textTransform: "uppercase",
   },
@@ -391,7 +392,7 @@ const styles = StyleSheet.create({
   },
   currentLocationText: {
     marginLeft: 8,
-    color: "#00baff",
+    color: colors.primary,
     fontWeight: "500",
   },
   buttonContainer: {
@@ -407,7 +408,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 12,
     borderRadius: 8,
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -417,7 +418,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   errorText: {
-    color: "#c70039",
+    color: colors.error,
     fontSize: 14,
     textAlign: "center",
     marginVertical: 16,

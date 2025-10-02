@@ -2,6 +2,7 @@ import React, { useState, useCallback} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Platform } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useFocusEffect } from '@react-navigation/native';
+import colors from "../styles/colors";
 
 
 const CategoriasTorneo = ({
@@ -55,7 +56,7 @@ const CategoriasTorneo = ({
         onPress={handlePress}
         disabled={disabled || isDisabled}
       >
-        <Ionicons name={iconName} size={24} color="#02B9FA" style={styles.icon2} />
+        <Ionicons name={iconName} size={24} color={colors.primary} style={styles.icon2} />
         <Text style={styles.textInput}>
        {selectedValue || placeholder}
         </Text>
@@ -165,7 +166,7 @@ const styles = StyleSheet.create({
     marginTop: 2, // Espaciado entre label y error
   },
   dropdownItemSelected: {
-  // backgroundColor: '#02B9FA',
+  // backgroundColor: colors.primary,
     backgroundColor: 'rgba(2, 185, 250, 0.5)',
 },
 });

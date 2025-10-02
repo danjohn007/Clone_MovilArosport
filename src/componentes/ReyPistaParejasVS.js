@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import ParejasVSRey from './ParejasVSRey';
+import colors from "../styles/colors";
 
 const ReyPistaParejasVS = ({ 
   jugadores,
@@ -122,13 +123,13 @@ const styles = StyleSheet.create({
   reyIndicator: {
     color: '#fff',
     fontSize: 12,
-    backgroundColor: '#02b9fa',
+    backgroundColor: colors.primary,
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 4,
   },
   guardarButton: {
-    backgroundColor: '#02b9fa',
+    backgroundColor: colors.primary,
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',

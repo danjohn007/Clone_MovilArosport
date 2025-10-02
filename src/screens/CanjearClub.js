@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   selectedItem: {
-    borderColor: '#02B9FA', // Cambia el color del borde cuando está seleccionado
+    borderColor: colors.primary, // Cambia el color del borde cuando está seleccionado
   },
   gridContainer: {
     flexDirection: 'row',
@@ -191,17 +191,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   menuItemNoticias: {
-    color: "#02B9FA", // Color azul para "NOTICIAS"
+    color: "colors.primary", // Color azul para "NOTICIAS"
     fontSize: 16,
     fontWeight: "bold",
     borderBottomWidth: 2, // Línea debajo de "NOTICIAS"
-    borderBottomColor: "#02B9FA",
+    borderBottomColor: "colors.primary",
     paddingBottom: 5,
   },
   selectedMenuItem: {
-    color: "#02B9FA", // Cambia el color al azul cuando está seleccionado
+    color: "colors.primary", // Cambia el color al azul cuando está seleccionado
     borderBottomWidth: 2,
-    borderBottomColor: "#02B9FA",
+    borderBottomColor: "colors.primary",
     paddingBottom: 5,
   },
   selectedMenuItemNoticias: {

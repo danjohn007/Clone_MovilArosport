@@ -199,7 +199,7 @@ const HistorialPartidos = ({ ronda, cancha, parejas, creador }) => {
                 onPress={() => handleEditar(index, pareja)}
                 style={styles.editIcon}
               >
-                <Ionicons name="create-outline" size={24} color="#02B9FA" />
+                <Ionicons name="create-outline" size={24} color={colors.primary} />
               </TouchableOpacity>
             )}
           </View>
@@ -350,7 +350,7 @@ const HistorialPartidos = ({ ronda, cancha, parejas, creador }) => {
 const styles = StyleSheet.create({
   container: {
     borderWidth: 2,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     backgroundColor: "#f5f5f5",
     borderRadius: 10,
     padding: 0,
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
   parejaContainer: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     borderRadius: 8,
     padding: 10,
     marginBottom: 8,
@@ -431,7 +431,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     textAlign: "center",
-    color: "#02B9FA",
+    color: "colors.primary",
   },
   editIcon: {
     marginTop: -24,
@@ -448,7 +448,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 8,
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     color: "white",
     borderWidth: 2,
     borderColor: "white",
@@ -471,7 +471,7 @@ const styles = StyleSheet.create({
     borderRadius: 18,
   },
   confirmButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     paddingVertical: 8,
     paddingHorizontal: 16,
     minWidth: 100,

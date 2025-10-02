@@ -143,7 +143,7 @@ const SearchBar = ({ onJugadorSeleccionado, placeholder = "Buscar...", clearSear
       {buscando && (
         <ActivityIndicator
           size="small"
-          color="#00baff"
+          color={colors.primary}
           style={{ marginTop: 10 }}
         />
       )}
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     height: 47,
     marginBottom: 10,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
     width: "95%",
     alignSelf: "center",
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 10,
     marginHorizontal: "2.5%",
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 1,
     marginBottom: 16,
   },

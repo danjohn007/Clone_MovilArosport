@@ -34,17 +34,17 @@ const InvitacionJugada = ({
       {/* Información detallada */}
       <View style={styles.infoContainer}>
         <View style={styles.infoRow}>
-          <Icon name="calendar-outline" size={16} color="#00baff" />
+          <Icon name="calendar-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{fecha}</Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Icon name="time-outline" size={16} color="#00baff" />
+          <Icon name="time-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{hora}</Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Icon name="person-outline" size={16} color="#00baff" />
+          <Icon name="person-outline" size={16} color={colors.primary} />
           <TouchableOpacity
             onPress={() => onViewInfo(id_jugador, id_juego, "invitaciones")}
             activeOpacity={0.7}
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   invitacionContainer: {
     backgroundColor: "#ffffff",
     width: "95%",
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
     alignSelf: "center",
     marginBottom: 16,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   invitacionTitle: {
     fontSize: RFValue(14, 667),
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     flex: 1,
     marginRight: 10,
     marginTop: -15,

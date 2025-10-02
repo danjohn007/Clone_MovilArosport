@@ -282,7 +282,7 @@ const HistorialPartidos2I = ({
               onPress={() => handleEditar(index, pareja)}
               style={styles.editIcon}
             >
-              <Ionicons name="create-outline" size={24} color="#02B9FA" />
+              <Ionicons name="create-outline" size={24} color={colors.primary} />
             </TouchableOpacity>
           )}
           <View style={styles.jugadoresContainer}>
@@ -599,7 +599,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     textAlign: "center",
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     padding: 8,
     borderRadius: 16,
     width: "90%",
@@ -610,7 +610,7 @@ const styles = StyleSheet.create({
   parejaContainer: {
     backgroundColor: "white",
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     borderRadius: 16,
     padding: 10,
     marginBottom: 18,
@@ -626,7 +626,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     marginBottom: 8,
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     width: "70%",
     alignSelf: "center",
     textAlign: "center",
@@ -678,7 +678,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#FFF",
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     width: "70%",
     alignSelf: "center",
     padding: 6,
@@ -696,7 +696,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#FFF",
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     padding: 6,
     borderRadius: 16,
     width: "68%",
@@ -713,7 +713,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#FFF",
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     padding: 2,
     borderRadius: 8,
     width: "38%",
@@ -738,7 +738,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 8,
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     color: "white",
     borderWidth: 2,
     borderColor: "white",
@@ -761,7 +761,7 @@ const styles = StyleSheet.create({
     borderRadius: 18,
   },
   confirmButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     paddingVertical: 8,
     paddingHorizontal: 16,
     minWidth: 100,

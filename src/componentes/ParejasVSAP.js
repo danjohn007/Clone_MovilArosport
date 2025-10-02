@@ -19,6 +19,7 @@ import TieBreakRonda from "../modales/TieBreakRonda";
 import TieBreak2 from "../modales/TimeBreak2";
 import { establecerLimitePuntos } from "./Activos/Americana/AmericanaApiService";
 import { Ionicons } from "@expo/vector-icons";
+import colors from "../styles/colors";
 
 const ParejasVSAP = ({
   jugador1,
@@ -723,7 +724,7 @@ const styles = StyleSheet.create({
   groupChild: {
     top: "9.9%",
     borderRadius: 16,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     borderWidth: 3.45,
     width: "100%",
     backgroundColor: "#fff",
@@ -734,7 +735,7 @@ const styles = StyleSheet.create({
   frameParentFlexBox: {
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     paddingHorizontal: 15,
     paddingVertical: 8,
     borderRadius: 16,
@@ -779,7 +780,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingHorizontal: 45,
     paddingVertical: 3,
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     borderRadius: 16,
     justifyContent: "space-between",
     width: "78.5%",
@@ -794,7 +795,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingHorizontal: 45,
     paddingVertical: 3,
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     borderRadius: 16,
     justifyContent: "space-between",
     width: "78.5%",

@@ -1412,7 +1412,7 @@ const Suscripciones = () => {
       <Modal transparent={true} animationType="fade" visible={loading2}>
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-            <ActivityIndicator size="large" color="#00baff" />
+            <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>Procesando suscripción...</Text>
           </View>
         </View>
@@ -1533,7 +1533,7 @@ const Suscripciones = () => {
                           <Text style={styles.currencyText}>
                             {selectedCurrency?.toUpperCase() || "..."}
                           </Text>
-                          <Icon name="chevron-down" size={15} color="#00BAFF" />
+                          <Icon name="chevron-down" size={15} color={colors.primary} />
                         </View>
                       </TouchableOpacity>
 
@@ -1555,7 +1555,7 @@ const Suscripciones = () => {
                                 onPress={() => setIsModalVisible(false)}
                                 activeOpacity={0.7}
                               >
-                                <Icono name="close" size={24} color="#00baff" />
+                                <Icono name="close" size={24} color={colors.primary} />
                               </TouchableOpacity>
                             </View>
                             <ScrollView
@@ -1622,7 +1622,7 @@ const Suscripciones = () => {
                                   name="edit"
                                   size={20}
                                   color={
-                                    personalesCompletado ? "white" : "#00baff"
+                                    personalesCompletado ? "white" : "colors.primary"
                                   }
                                   style={styles.buttonIconR}
                                 />
@@ -1650,7 +1650,7 @@ const Suscripciones = () => {
                                   name="edit"
                                   size={20}
                                   color={
-                                    organizacionCompletado ? "white" : "#00baff"
+                                    organizacionCompletado ? "white" : "colors.primary"
                                   }
                                   style={styles.buttonIconR}
                                 />
@@ -1678,7 +1678,7 @@ const Suscripciones = () => {
                                   name="edit"
                                   size={20}
                                   color={
-                                    domicilioCompletado ? "white" : "#00baff"
+                                    domicilioCompletado ? "white" : "colors.primary"
                                   }
                                   style={styles.buttonIconR}
                                 />
@@ -2213,7 +2213,7 @@ const Suscripciones = () => {
                           <Text style={styles.currencyText}>
                             {selectedCurrency?.toUpperCase() || "..."}
                           </Text>
-                          <Icon name="chevron-down" size={15} color="#00BAFF" />
+                          <Icon name="chevron-down" size={15} color={colors.primary} />
                         </View>
                       </TouchableOpacity>
 
@@ -2235,7 +2235,7 @@ const Suscripciones = () => {
                                 onPress={() => setIsModalVisible(false)}
                                 activeOpacity={0.7}
                               >
-                                <Icono name="close" size={24} color="#00baff" />
+                                <Icono name="close" size={24} color={colors.primary} />
                               </TouchableOpacity>
                             </View>
                             <ScrollView
@@ -2284,7 +2284,7 @@ const Suscripciones = () => {
                                 onPress={() => setShowExtraModal(false)}
                                 activeOpacity={0.7}
                               >
-                                <Icono name="close" size={24} color="#00baff" />
+                                <Icono name="close" size={24} color={colors.primary} />
                               </TouchableOpacity>
                             </View>
                             <ScrollView
@@ -2305,7 +2305,7 @@ const Suscripciones = () => {
                                     name="edit"
                                     size={20}
                                     color={
-                                      personalesCompletado ? "#fff" : "#00baff"
+                                      personalesCompletado ? "#fff" : "colors.primary"
                                     }
                                     style={styles.registerModalButtonIconNew}
                                   />
@@ -2334,7 +2334,7 @@ const Suscripciones = () => {
                                     color={
                                       organizacionCompletado
                                         ? "#fff"
-                                        : "#00baff"
+                                        : "colors.primary"
                                     }
                                     style={styles.registerModalButtonIconNew}
                                   />
@@ -2361,7 +2361,7 @@ const Suscripciones = () => {
                                     name="edit"
                                     size={20}
                                     color={
-                                      domicilioCompletado ? "#fff" : "#00baff"
+                                      domicilioCompletado ? "#fff" : "colors.primary"
                                     }
                                     style={styles.registerModalButtonIconNew}
                                   />
@@ -2436,7 +2436,7 @@ const Suscripciones = () => {
                                   <Icono
                                     name="close"
                                     size={24}
-                                    color="#00baff"
+                                    color={colors.primary}
                                   />
                                 </TouchableOpacity>
                               </View>
@@ -2621,7 +2621,7 @@ const Suscripciones = () => {
                                   <Icono
                                     name="close"
                                     size={24}
-                                    color="#00baff"
+                                    color={colors.primary}
                                   />
                                 </TouchableOpacity>
                               </View>
@@ -2731,7 +2731,7 @@ const Suscripciones = () => {
                                   <Icono
                                     name="close"
                                     size={24}
-                                    color="#00baff"
+                                    color={colors.primary}
                                   />
                                 </TouchableOpacity>
                               </View>
@@ -2974,7 +2974,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   loginButton: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     width: 200, // Establece el ancho a 205 píxeles
     paddingVertical: 12,
     borderRadius: 30,
@@ -3008,7 +3008,7 @@ const styles = StyleSheet.create({
   modalContent: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
@@ -3026,7 +3026,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 8, // Sombra para Android
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   modalContentS: {
     backgroundColor: "rgba(255, 255, 255, 1)", // Fondo blanco translúcido
@@ -3038,13 +3038,13 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 8, // Sombra para Android
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   loadingText: {
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: "colors.primary",
   },
   list: {
     paddingBottom: "20%",
@@ -3064,7 +3064,7 @@ const styles = StyleSheet.create({
   currencyText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00BAFF",
+    color: "colors.primary",
   },
   dropdownContainer: {
     position: "absolute",
@@ -3084,7 +3084,7 @@ const styles = StyleSheet.create({
   dropdownText: {
     padding: 10,
     fontSize: 14,
-    color: "#00BAFF",
+    color: "colors.primary",
   },
   flag: {
     width: 20,
@@ -3102,7 +3102,7 @@ const styles = StyleSheet.create({
     alignSelf: "center", // Centra el contenedor en la pantalla
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: "#00baff", // Color del borde
+    borderColor: "colors.primary", // Color del borde
     marginBottom: 15,
     flexDirection: "row",
     alignItems: "center", // Alinea los elementos en la misma línea
@@ -3117,7 +3117,7 @@ const styles = StyleSheet.create({
     alignSelf: "center", // Centra el contenedor en la pantalla
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: "#00baff", // Color del borde
+    borderColor: "colors.primary", // Color del borde
     marginBottom: 10,
     flexDirection: "row",
     alignItems: "center", // Alinea los elementos en la misma línea
@@ -3156,7 +3156,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   modalTitle: {
     fontSize: 16,
@@ -3185,7 +3185,7 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     marginTop: 10,
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     padding: 10,
     borderRadius: 5,
     alignItems: "center",
@@ -3208,12 +3208,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     flexDirection: "row", // Añadido para alinear el ícono y el texto horizontalmente
     alignItems: "center", // Alinea el ícono y el texto verticalmente
   },
   buttonRegistro: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     width: 205, // Establece el ancho a 205 píxeles
     paddingVertical: 12,
     borderRadius: 30,
@@ -3224,7 +3224,7 @@ const styles = StyleSheet.create({
     marginTop: -20,
   },
   buttonTextR: {
-    color: "#00baff",
+    color: "colors.primary",
     fontSize: 14,
     fontWeight: "600",
     textAlign: "center",
@@ -3239,7 +3239,7 @@ const styles = StyleSheet.create({
     marginRight: 10, // Espacio entre el ícono y el texto
   },
   headerContainer: {
-    backgroundColor: "#00baff", // Fondo de color para el encabezado
+    backgroundColor: "colors.primary", // Fondo de color para el encabezado
     padding: 10,
     borderRadius: 10,
     marginTop: 20,
@@ -3254,7 +3254,7 @@ const styles = StyleSheet.create({
     alignItems: "center", // Centrar el título
   },
   headerContainerP: {
-    backgroundColor: "#00baff", // Fondo de color para el encabezado
+    backgroundColor: "colors.primary", // Fondo de color para el encabezado
     padding: 10,
     borderRadius: 10,
     borderWidth: 1,
@@ -3287,7 +3287,7 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   buttonGuardarActive: {
-    backgroundColor: "#00baff", // Azul cuando está completo
+    backgroundColor: "colors.primary", // Azul cuando está completo
   },
   buttonGuardarInactive: {
     backgroundColor: "white", // blanco cuando falta info
@@ -3296,10 +3296,10 @@ const styles = StyleSheet.create({
     color: "white", // Texto blanco cuando está activo
   },
   textInactive: {
-    color: "#00baff", // Texto azul  cuando está inactivo
+    color: "colors.primary", // Texto azul  cuando está inactivo
   },
   buttonDisabled: {
-    backgroundColor: "#00baff", // Color gris cuando está deshabilitado
+    backgroundColor: "colors.primary", // Color gris cuando está deshabilitado
   },
   juegosIcon: {
     position: "absolute",
@@ -3371,7 +3371,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   currencyModalHeader: {
     flexDirection: "row",
@@ -3385,7 +3385,7 @@ const styles = StyleSheet.create({
   currencyModalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
   },
@@ -3409,7 +3409,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#c70039",
+    backgroundColor: "colors.error",
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -3455,7 +3455,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -3474,7 +3474,7 @@ const styles = StyleSheet.create({
   registerModalTitleNew: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
   },
@@ -3504,13 +3504,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginVertical: 8,
     borderWidth: 1,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   registerModalButtonActiveNew: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
   },
   registerModalButtonTextNew: {
-    color: "#00baff",
+    color: "colors.primary",
     fontSize: 14,
     fontWeight: "600",
     marginLeft: 8,
@@ -3522,7 +3522,7 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   registerModalSubmitButtonNew: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     flexDirection: "row",
     flex: 1,
     marginLeft: 8,
@@ -3557,7 +3557,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -3576,7 +3576,7 @@ const styles = StyleSheet.create({
   personalModalTitleNew: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
   },
@@ -3598,7 +3598,7 @@ const styles = StyleSheet.create({
     borderTopColor: "#e2e8f0",
   },
   personalModalSubmitButtonNew: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     flexDirection: "row",
     flex: 1,
     marginLeft: 8,
@@ -3630,7 +3630,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -3649,7 +3649,7 @@ const styles = StyleSheet.create({
   organizationModalTitleNew: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
   },
@@ -3671,7 +3671,7 @@ const styles = StyleSheet.create({
     borderTopColor: "#e2e8f0",
   },
   organizationModalSubmitButtonNew: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     flexDirection: "row",
     flex: 1,
     marginLeft: 8,
@@ -3703,7 +3703,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
@@ -3722,7 +3722,7 @@ const styles = StyleSheet.create({
   addressModalTitleNew: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
   },
@@ -3744,7 +3744,7 @@ const styles = StyleSheet.create({
     borderTopColor: "#e2e8f0",
   },
   addressModalSubmitButtonNew: {
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     flexDirection: "row",
     flex: 1,
     marginLeft: 8,

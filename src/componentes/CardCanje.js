@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: '#02B9FA',
+    color: colors.primary,
     textAlign: 'center',
     fontWeight: 'bold',
   }, 

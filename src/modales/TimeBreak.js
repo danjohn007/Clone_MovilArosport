@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, StyleSheet, Modal, Text, TouchableOpacity, ScrollView, TextInput} from 'react-native';
 import Titulo from '../componentes/Titulo';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import colors from "../styles/colors";
 
 
 const TimeBreak = ({ visible, onClose, onConfirm, pareja, puntajes = { pareja1: '', pareja2: '' }, setPuntajes }) => {
@@ -152,7 +153,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: 'white',
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     borderRadius: 15,
     padding: 20,
     width: '90%',
@@ -291,7 +292,7 @@ vs: {
     width: 50,
     height: 50,
     borderRadius: 8,
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     color: 'white',
     borderWidth: 2,
     borderColor: 'white',

@@ -11,6 +11,7 @@ import {
 import MapView, { Marker } from "react-native-maps";
 import Icon from "react-native-vector-icons/Ionicons";
 import { RFValue } from "react-native-responsive-fontsize";
+import colors from "../styles/colors";
 
 // Helper functions (same as before)
 const getNivelLabel = (id) => {
@@ -51,7 +52,7 @@ const getNivelColor = (id) => {
     case 7:
       return "#607D8B";
     default:
-      return "#00BAFF";
+      return colors.primary;
   }
 };
 
@@ -114,7 +115,7 @@ const InvitacionesModal = ({
               onPress={closeModal}
               activeOpacity={0.7}
             >
-              <Icon name="close" size={24} color="#00baff" />
+              <Icon name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -160,21 +161,21 @@ const InvitacionesModal = ({
               <Text style={styles.sectionTitle}>DETALLES</Text>
 
               <View style={styles.detailRow}>
-                <Icon name="tennisball-outline" size={16} color="#00baff" />
+                <Icon name="tennisball-outline" size={16} color={colors.primary} />
                 <Text style={styles.detailLabel}>Nombre:</Text>
                 <Text style={styles.detailValue}>{data?.nombre || "-"}</Text>
               </View>
 
               {data?.nombre_club && (
                 <View style={styles.detailRow}>
-                  <Icon name="business-outline" size={16} color="#00baff" />
+                  <Icon name="business-outline" size={16} color={colors.primary} />
                   <Text style={styles.detailLabel}>Club:</Text>
                   <Text style={styles.detailValue}>{data.nombre_club}</Text>
                 </View>
               )}
 
               <View style={styles.detailRow}>
-                <Icon name="location-outline" size={16} color="#00baff" />
+                <Icon name="location-outline" size={16} color={colors.primary} />
                 <Text style={styles.detailLabel}>Dirección:</Text>
                 <Text style={styles.detailValue}>
                   {data?.calle && data?.colonia && data?.cp
@@ -184,7 +185,7 @@ const InvitacionesModal = ({
               </View>
 
               <View style={styles.detailRow}>
-                <Icon name="trophy-outline" size={16} color="#00baff" />
+                <Icon name="trophy-outline" size={16} color={colors.primary} />
                 <Text style={styles.detailLabel}>Categoria:</Text>
                 <TouchableOpacity onPress={toggleNivelInfo}>
                   <Text style={styles.detailValue}>{data?.categoria || "-"}</Text>
@@ -208,7 +209,7 @@ const InvitacionesModal = ({
               )}
 
               <View style={styles.detailRow}>
-                <Icon name="list-outline" size={16} color="#00baff" />
+                <Icon name="list-outline" size={16} color={colors.primary} />
                 <Text style={styles.detailLabel}>Modalidad:</Text>
                 <Text style={styles.detailValue}>{data?.modalidad_nombre || "-"}</Text>
               </View>
@@ -260,7 +261,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
 
   // Encabezado
@@ -276,7 +277,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
   },
@@ -297,7 +298,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 8,
     textTransform: "uppercase",
   },
@@ -369,7 +370,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -379,7 +380,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#c70039",
+    backgroundColor: colors.error,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -394,7 +395,7 @@ const styles = StyleSheet.create({
 
   // Error
   errorText: {
-    color: "#c70039",
+    color: colors.error,
     fontSize: 14,
     textAlign: "center",
     marginVertical: 16,

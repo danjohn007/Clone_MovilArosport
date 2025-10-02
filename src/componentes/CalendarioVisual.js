@@ -60,7 +60,7 @@ const CalendarioVisual = ({ placeholder = "Seleccionar fecha", selectedValue, on
         style={styles.inputBox}
         onPress={() => setIsPickerVisible(true)}
       >
-        <Ionicons name="calendar-outline" size={24} color="#02B9FA" style={styles.icon} />
+        <Ionicons name="calendar-outline" size={24} color={colors.primary} style={styles.icon} />
         <Text style={[styles.textInput, styles.selectedText]}>
           {formatDate(selectedDate)}
         </Text>
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     paddingVertical: 10,
     paddingHorizontal: 15,
     width: '88%',
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fondo semitransparente
   },
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   },
   closeButtonText: {
     fontSize: 16,
-    color: '#02B9FA',
+    color: colors.primary,
     fontWeight: 'bold',
   },
 });

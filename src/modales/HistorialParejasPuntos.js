@@ -10,6 +10,7 @@ import {
 import { obtenerHistorialPuntos } from "../componentes/Activos/Americana/RetaApiService.js";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import APIManager from "../componentes/API/APIManager.jsx";
+import colors from "../styles/colors";
 
 const HistorialParejaPuntos = ({
   visible,
@@ -109,7 +110,7 @@ const HistorialParejaPuntos = ({
               style={styles.closeButtonHeader}
               onPress={closeModal}
             >
-              <Ionicons name="close" size={24} color="#00baff" />
+              <Ionicons name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -207,7 +208,7 @@ const styles = StyleSheet.create({
     width: "90%",
     maxHeight: "90%",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     padding: 0,
     overflow: "hidden",
   },
@@ -223,7 +224,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 17,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
     textTransform: "uppercase",
@@ -247,7 +248,7 @@ const styles = StyleSheet.create({
   // Estructura cuadriculada
   tableGrid: {
     borderWidth: 1,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     borderRadius: 8,
     overflow: "hidden",
     backgroundColor: "#f8f9fa",
@@ -256,7 +257,7 @@ const styles = StyleSheet.create({
   // Fila de encabezado
   tableHeaderRow: {
     flexDirection: "row",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
   },
   headerCell: {
     paddingVertical: 14,

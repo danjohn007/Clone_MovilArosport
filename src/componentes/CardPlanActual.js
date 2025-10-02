@@ -182,39 +182,39 @@ const CardPlanActual = ({
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>DETALLES</Text>
           <View style={styles.detailRow}>
-            <Icon name="cash-outline" size={16} color="#00baff" />
+            <Icon name="cash-outline" size={16} color={colors.primary} />
             <Text style={styles.detailLabel}>Total:</Text>
             <Text style={styles.detailValue}>{`${total} ${moneda}`}</Text>
           </View>
           <View style={styles.detailRow}>
-            <Icon name="calendar-outline" size={16} color="#00baff" />
+            <Icon name="calendar-outline" size={16} color={colors.primary} />
             <Text style={styles.detailLabel}>Fecha de Contratación:</Text>
             <Text style={styles.detailValue}>{fechaContratacion}</Text>
           </View>
           <View style={styles.detailRow}>
-            <Icon name="calendar-number-outline" size={16} color="#00baff" />
+            <Icon name="calendar-number-outline" size={16} color={colors.primary} />
             <Text style={styles.detailLabel}>Fecha de Cobro:</Text>
             <Text style={styles.detailValue}>{fechaCobro}</Text>
           </View>
           <View style={styles.detailRow}>
-            <Icon name="checkmark-circle-outline" size={16} color="#00baff" />
+            <Icon name="checkmark-circle-outline" size={16} color={colors.primary} />
             <Text style={styles.detailLabel}>Estatus:</Text>
             <Text style={styles.detailValue}>{estatus === 'active' ? 'Activo' : 'Inactivo'}</Text>
           </View>
           <View style={styles.detailRow}>
-            <Icon name="time-outline" size={16} color="#00baff" />
+            <Icon name="time-outline" size={16} color={colors.primary} />
             <Text style={styles.detailLabel}>Días Restantes:</Text>
             <Text style={styles.detailValue}>{dias} días</Text>
           </View>
           {fechaCancelacionState && (
             <View style={styles.detailRow}>
-              <Icon name="close-circle-outline" size={16} color="#00baff" />
+              <Icon name="close-circle-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabel}>Fecha de cancelación:</Text>
               <Text style={styles.detailValue}>{fechaCancelacionState}</Text>
             </View>
           )}
           <View style={styles.detailRow}>
-            <Icon name="download-outline" size={16} color="#00baff" />
+            <Icon name="download-outline" size={16} color={colors.primary} />
             <Text style={styles.detailLabel}>Factura:</Text>
             <Text style={styles.linkText} onPress={() => downloadFile(hostedInvoiceUrl)}>
               Ver compra
@@ -236,7 +236,7 @@ const CardPlanActual = ({
           </TouchableOpacity>
         )}
         <TouchableOpacity
-          style={[styles.footerButton, { backgroundColor: '#c70039' }, (loading || fechaCancelacionState) && styles.disabledButton]}
+          style={[styles.footerButton, { backgroundColor: colors.error }, (loading || fechaCancelacionState) && styles.disabledButton]}
           onPress={handleCancelClick}
           disabled={loading || !!fechaCancelacionState}
           activeOpacity={0.8}
@@ -270,7 +270,7 @@ const CardPlanActual = ({
                 onPress={() => setModalVisible(false)}
                 activeOpacity={0.7}
               >
-                <Icon name="close" size={24} color="#00baff" />
+                <Icon name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
             <View style={styles.modalContent}>
@@ -284,7 +284,7 @@ const CardPlanActual = ({
                       </Text>
                     </View>
                     <View style={styles.detailRow}>
-                      <Icon name="cash-outline" size={16} color="#00baff" />
+                      <Icon name="cash-outline" size={16} color={colors.primary} />
                       <Text style={styles.detailLabel}>Costo:</Text>
                       <Text style={styles.detailValue}>
                         {prices.length > 0 
@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
     minHeight: 300, // Asegura espacio suficiente para el contenido
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   header: {
     flexDirection: "row",
@@ -345,7 +345,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
   },
   content: {
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: "colors.primary",
     marginBottom: 16,
     textTransform: "uppercase",
   },
@@ -385,7 +385,7 @@ const styles = StyleSheet.create({
   linkText: {
     fontSize: 13,
     fontWeight: "500",
-    color: "#00baff",
+    color: "colors.primary",
     textDecorationLine: "underline",
     flex: 1,
     textAlign: "left",
@@ -402,7 +402,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     padding: 12,
     borderRadius: 8,
     marginBottom: 8,
@@ -430,7 +430,7 @@ const styles = StyleSheet.create({
     maxWidth: 600,
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
   modalHeader: {
     flexDirection: "row",
@@ -444,7 +444,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
   },
@@ -469,7 +469,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     padding: 12,
     borderRadius: 8,
     marginHorizontal: 4,

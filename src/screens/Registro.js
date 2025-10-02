@@ -501,7 +501,7 @@ const Registro = () => {
                 <Ionicons
                   name={categoria === "Varonil" ? "male" : "female"}
                   size={20}
-                  color="#02B9FA"
+                  color={colors.primary}
                   style={styles.genderIcon}
                 />
                 <Text style={styles.pickerText}>Género: {categoria}</Text>
@@ -646,7 +646,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     paddingHorizontal: 14,
     height: 50,
     marginBottom: 10,
@@ -661,7 +661,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 12,
-    color: "#C70039",
+    color: "colors.error",
     marginBottom: 4,
     marginLeft: 2,
     marginTop: -4,
@@ -696,7 +696,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 16,
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     padding: 20,
     width: "85%",
     maxHeight: "80%",
@@ -717,8 +717,8 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   pillSelected: {
-    backgroundColor: "#02B9FA",
-    borderColor: "#02B9FA",
+    backgroundColor: "colors.primary",
+    borderColor: "colors.primary",
   },
   pillText: {
     fontSize: 14,

@@ -475,8 +475,8 @@ const Solicitudes = () => {
               <RefreshControl
                 refreshing={isRefreshing}
                 onRefresh={handleRefresh}
-                colors={["#00baff"]}
-                tintColor="#00baff"
+                colors={["colors.primary"]}
+                tintColor="colors.primary"
               />
             }
             ListEmptyComponent={

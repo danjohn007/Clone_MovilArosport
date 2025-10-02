@@ -150,7 +150,7 @@ const PendienteItem = ({ idJuego, nombreJuego, fecha, hora, onSalirSuccess, modo
     frameWrapper: {
       backgroundColor: "#FFF",
       borderWidth: 3,
-      borderColor: "#00BAFF",
+      borderColor: "colors.primary",
       borderRadius: 16,
       padding: 15,
       flexDirection: "row",
@@ -168,7 +168,7 @@ const PendienteItem = ({ idJuego, nombreJuego, fecha, hora, onSalirSuccess, modo
       marginBottom: 12,
     },
     titleGame: {
-      color: "#00BAFF",
+      color: "colors.primary",
       fontSize: 17,
       fontWeight: "bold",
     },
@@ -186,7 +186,7 @@ const PendienteItem = ({ idJuego, nombreJuego, fecha, hora, onSalirSuccess, modo
     },
     icon: {
       marginRight: 8,
-      color: "#00BAFF",
+      color: "colors.primary",
     },
     // Columna de botones
     buttonsColumn: {
@@ -200,21 +200,21 @@ const PendienteItem = ({ idJuego, nombreJuego, fecha, hora, onSalirSuccess, modo
       marginLeft: 5, // Espacio adicional entre el contenido y la línea
     },
     mapButton: {
-      backgroundColor: "#00BAFF",
+      backgroundColor: "colors.primary",
       padding: 12,
       borderRadius: 16,
       width: '90%', // Reduje el ancho de los botones para que no toquen la línea
       alignItems: 'center',
     },
     editButton: {
-      backgroundColor: "#00BAFF",
+      backgroundColor: "colors.primary",
       padding: 12,
       borderRadius: 16,
       width: '90%',
       alignItems: 'center',
     },
     exitButton: {
-      backgroundColor: "#00BAFF",
+      backgroundColor: "colors.primary",
       padding: 12,
       borderRadius: 16,
       width: '90%',

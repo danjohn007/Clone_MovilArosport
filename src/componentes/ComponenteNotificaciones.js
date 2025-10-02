@@ -87,7 +87,7 @@ const ComponenteNotificaciones = ({
               <Ionicons
                 name="checkmark"
                 size={28}
-                color="#00BAFF"
+                color={colors.primary}
               />
             </View>
           ) : (
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00BAFF",
+    color: "colors.primary",
     flexShrink: 1,
     marginRight: 8,
   },
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
     minWidth: 48,
   },
   fullDeleteBackground: {
-    backgroundColor: "#C70039",
+    backgroundColor: "colors.error",
     justifyContent: "center",
     alignItems: "center",
     width: 80,

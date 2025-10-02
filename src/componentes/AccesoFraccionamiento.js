@@ -211,7 +211,7 @@ const AccesoFraccionamiento = () => {
               <MaterialDesignIcons
                 name="home-city-outline"
                 size={24}
-                color="#02B9FA"
+                color={colors.primary}
               />
               <Text
                 style={[
@@ -222,7 +222,7 @@ const AccesoFraccionamiento = () => {
               >
                 {selectedFraccionamientoNombre}
               </Text>
-              <MaterialIcons name="arrow-drop-down" size={24} color="#02B9FA" />
+              <MaterialIcons name="arrow-drop-down" size={24} color={colors.primary} />
             </TouchableOpacity>
           )}
 
@@ -247,7 +247,7 @@ const AccesoFraccionamiento = () => {
           <MaterialIcons
             name="access-time"
             size={60}
-            color="#02B9FA"
+            color={colors.primary}
             style={styles.icon}
           />
           <View style={styles.messageContent}>
@@ -330,7 +330,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingVertical: 12,
     paddingHorizontal: 20,
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     borderRadius: 8,
     alignSelf: "center", // Evita que el botón expanda su ancho
   },
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     padding: 9,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -398,7 +398,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 8,
     borderWidth: 2,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
@@ -425,7 +425,7 @@ const styles = StyleSheet.create({
     width: "80%",
     backgroundColor: "white",
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     borderRadius: 16,
     padding: 20,
     alignItems: "center",
@@ -457,7 +457,7 @@ const styles = StyleSheet.create({
   modalCloseButton: {
     marginTop: 16,
     padding: 10,
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     borderRadius: 8,
     width: "100%",
     alignItems: "center",
@@ -467,8 +467,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   modalOptionSelected: {
-    backgroundColor: "#02B9FA", // Azul
-    borderColor: "#02B9FA",
+    backgroundColor: "colors.primary", // Azul
+    borderColor: "colors.primary",
   },
   modalOptionTextSelected: {
     color: "white",

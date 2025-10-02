@@ -8,7 +8,7 @@ const Formulario = ({ iconName, placeholder, value, onChangeText, secureTextEntr
   return (
     <View style={styles.inputContainer}>
       <View style={styles.inputBox}>
-        <Ionicons name={iconName}  size={24} color="#02B9FA" style={styles.icon} />
+        <Ionicons name={iconName}  size={24} color={colors.primary} style={styles.icon} />
         <TextInput
           style={styles.textInput}
           placeholder={placeholder}
@@ -26,7 +26,7 @@ const Formulario = ({ iconName, placeholder, value, onChangeText, secureTextEntr
                     <Ionicons 
                      name={secureTextEntry ? "eye-off-outline" : "eye-outline"} // Cambié los íconos por los de ojo
                       size={20} 
-                      color="#00BAFF" 
+                      color={colors.primary} 
                     />
                   </TouchableOpacity>
                 )}
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
      backgroundColor: 'white',
      borderRadius: 16,
      borderWidth: 3,
-     borderColor: '#02B9FA',
+     borderColor: colors.primary,
      paddingHorizontal: 10,
      paddingVertical: 5,
      marginBottom: 10,

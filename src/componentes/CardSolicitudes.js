@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   gameTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#02B9FA",
+    color: "colors.primary",
   },
   detailsContainer: {
     width: "100%",
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 15,
-    color: "#02B9FA",
+    color: "colors.primary",
     marginRight: 10,
   },
   value: {
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 5,
-    color: "#02B9FA",
+    color: "colors.primary",
   },
   statusContainer: {
     flexDirection: "row",

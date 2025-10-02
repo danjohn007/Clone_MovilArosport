@@ -26,6 +26,7 @@ import {
 import { useAuth } from "../screens/Auth/AuthContext.js";
 import Categorias from "../componentes/Categorias.js";
 import { FontAwesome5 } from "@expo/vector-icons";
+import colors from "../styles/colors";
 
 const BASE_ICON = require("../../assets/icon_no_profile.png");
 const BASE_URL = URL.IMAGENES;
@@ -327,7 +328,7 @@ const JugadoresRey = ({
                 <Icon
                   name="reorder-three"
                   size={20}
-                  color={esPrimeraParejaDeCancha ? "#02B9FA" : "#FF9500"}
+                  color={esPrimeraParejaDeCancha ? colors.primary : "#FF9500"}
                 />
               </TouchableOpacity>
             )}
@@ -343,7 +344,7 @@ const JugadoresRey = ({
                     hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                     activeOpacity={0.7}
                   >
-                    <Icon name="person-remove" size={20} color="#C70039" />
+                    <Icon name="person-remove" size={20} color={colors.error} />
                   </TouchableOpacity>
                 )}
               </View>
@@ -667,7 +668,7 @@ const JugadoresRey = ({
         <Text style={styles.resultadoTexto}>
           {item.nombre_completo || ""} ({item.usuario || ""})
         </Text>
-        <Icon name="add-circle" size={24} color="#02B9FA" />
+        <Icon name="add-circle" size={24} color={colors.primary} />
       </TouchableOpacity>
     );
   };
@@ -825,7 +826,7 @@ const JugadoresRey = ({
               <Text style={styles.titleText}>Jugadores</Text>
             </View>
             <TouchableOpacity onPress={() => setModalVisible(false)}>
-              <Icon name="close" size={25} color="#02B9FA" />
+              <Icon name="close" size={25} color={colors.primary} />
             </TouchableOpacity>
           </View>
           <View style={styles.detailsContainer}>
@@ -845,14 +846,14 @@ const JugadoresRey = ({
                   {searchTerm.trim() !== "" &&
                     (buscando ? (
                       <View style={styles.addIcon}>
-                        <ActivityIndicator size="small" color="#02B9FA" />
+                        <ActivityIndicator size="small" color={colors.primary} />
                       </View>
                     ) : (
                       <TouchableOpacity
                         onPress={() => handleAgregarJugador({})}
                       >
                         <View style={styles.addIcon}>
-                          <Icon name="add-circle" size={24} color="#02B9FA" />
+                          <Icon name="add-circle" size={24} color={colors.primary} />
                         </View>
                       </TouchableOpacity>
                     ))}
@@ -888,7 +889,7 @@ const JugadoresRey = ({
                       setLimitePuntos((prev) => Math.max(1, prev - 1));
                     }}
                   >
-                    <Icon name="remove" size={20} color="#02B9FA" />
+                    <Icon name="remove" size={20} color={colors.primary} />
                   </TouchableOpacity>
 
                   <TextInput
@@ -916,7 +917,7 @@ const JugadoresRey = ({
                       setLimitePuntos((prev) => Math.min(99, prev + 1))
                     }
                   >
-                    <Icon name="add" size={20} color="#02B9FA" />
+                    <Icon name="add" size={20} color={colors.primary} />
                   </TouchableOpacity>
                 </View>
               </View>
@@ -926,7 +927,7 @@ const JugadoresRey = ({
               {loadingJugadores ? (
                 <ActivityIndicator
                   size="large"
-                  color="#02B9FA"
+                  color={colors.primary}
                   style={{ marginTop: 20 }}
                 />
               ) : !jugadasRegistradas && soyCreador ? (
@@ -1109,7 +1110,7 @@ const JugadoresRey = ({
                   // setCategoriaManual(null);
                 }}
               >
-                <Icon name="close" size={25} color="#02B9FA" />
+                <Icon name="close" size={25} color={colors.primary} />
               </TouchableOpacity>
             </View>
 
@@ -1185,7 +1186,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 10,
     borderRadius: 10,
   },
@@ -1263,7 +1264,7 @@ const styles = StyleSheet.create({
   },
   jugador1: {
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
   },
   jugador2: {
     borderWidth: 3,
@@ -1346,7 +1347,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1.1,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     borderRadius: 16,
     paddingHorizontal: 10,
     marginBottom: 10,
@@ -1359,21 +1360,21 @@ const styles = StyleSheet.create({
   },
   addIcon: {
     fontSize: 22,
-    color: "#02B9FA",
+    color: colors.primary,
     paddingHorizontal: -5,
   },
   modalContainer2: {
     flex: 1,
     // backgroundColor: "rgba(0, 0, 0, 0.5)",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent2: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     padding: 24,
     borderRadius: 10,
     alignItems: "center",
@@ -1382,7 +1383,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: colors.primary,
   },
   //estilos cartas jugadores
   jugadorCard: {
@@ -1446,7 +1447,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: "#02B9FA",
+    color: colors.primary,
     fontWeight: "500",
   },
   //estilos parejas
@@ -1466,7 +1467,7 @@ const styles = StyleSheet.create({
     opacity: 0.9,
     elevation: 10,
     backgroundColor: "#f0f8ff",
-    shadowColor: "#02B9FA",
+    shadowColor: colors.primary,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
@@ -1486,7 +1487,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between", // 🔑 separa texto e ícono
-    backgroundColor: "#02B9FA", // color de fondo para todo
+    backgroundColor: colors.primary, // color de fondo para todo
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderRadius: 16,
@@ -1511,7 +1512,7 @@ const styles = StyleSheet.create({
 
   primeraPareja: {
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
   },
   segundaPareja: {
     borderWidth: 3,
@@ -1557,7 +1558,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 18,
-    color: "#02B9FA",
+    color: colors.primary,
     textTransform: "uppercase",
     textAlign: "center",
     fontWeight: "500",
@@ -1611,8 +1612,8 @@ const styles = StyleSheet.create({
     alignSelf: "center", // ✅ Esto asegura que se centre
   },
   pillSelected: {
-    backgroundColor: "#02B9FA",
-    borderColor: "#02B9FA",
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
   },
   pillText: {
     fontSize: 14,
@@ -1650,7 +1651,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 18,
-    color: "#02B9FA",
+    color: colors.primary,
     textTransform: "uppercase",
     textAlign: "center",
     fontWeight: "500",
@@ -1660,7 +1661,7 @@ const styles = StyleSheet.create({
     flex: 4,
   },
   pillDragging: {
-    backgroundColor: "#02B9FA", // Azul al arrastrar
+    backgroundColor: colors.primary, // Azul al arrastrar
     borderColor: "white",
   },
   pillTextDragging: {
@@ -1736,7 +1737,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8F9FA",
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     marginLeft: 10,
   },
   arrowButton: {
@@ -1749,7 +1750,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontSize: 16,
     fontWeight: "600",
-    color: "#02B9FA",
+    color: colors.primary,
   },
 });
 export default JugadoresRey;

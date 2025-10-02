@@ -66,7 +66,7 @@ const Principal = () => {
   console.log("esstado de usuario", id_usuario);
 
   const handleNotificationPress = () => {
-    setNotificationColor("#02B9FA");
+    setNotificationColor("colors.primary");
     setTimeout(() => {
       navigation.navigate("Notificaciones");
       setNotificationColor("white");
@@ -561,7 +561,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     alignItems: "center",
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     marginTop: 120,
     overflow: "hidden", // Para asegurarnos de que nada se desborde
   },
@@ -607,7 +607,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   selectedItem: {
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
   },
   button: {
     marginTop: 10,
@@ -627,7 +627,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 70,
     right: 20,
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     borderRadius: 50,
     width: 50,
     height: 50,

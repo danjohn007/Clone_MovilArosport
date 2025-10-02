@@ -20,6 +20,7 @@ import {
   actualizarRonda,
 } from "./Activos/Americana/RetaApiService.js";
 import { parse } from "react-native-svg";
+import colors from "../styles/colors";
 
 // Añadí estado para controlar la apertura del modal de tie break
 const HistorialPartidos2 = ({
@@ -450,7 +451,7 @@ const HistorialPartidos2 = ({
               onPress={() => handleEditar(index, pareja, 1)}
               style={styles.editIcon}
             >
-              <Ionicons name="create-outline" size={24} color="#02B9FA" />
+              <Ionicons name="create-outline" size={24} color={colors.primary} />
             </TouchableOpacity>
           )}
           <View style={styles.jugadoresContainer}>
@@ -631,7 +632,7 @@ const HistorialPartidos2 = ({
                     setPuntajes(nuevo);
                   }}
                   placeholder="0"
-                  placeholderTextColor="#00BAFF"
+                  placeholderTextColor=colors.primary
                 />
                 <Text style={styles.vs}>-</Text>
                 <TextInput
@@ -662,7 +663,7 @@ const HistorialPartidos2 = ({
                     setPuntajes(nuevo);
                   }}
                   placeholder="0"
-                  placeholderTextColor="#00BAFF"
+                  placeholderTextColor=colors.primary
                 />
               </View>
 
@@ -685,7 +686,7 @@ const HistorialPartidos2 = ({
                       });
                     }}
                     placeholder="0"
-                    placeholderTextColor="#00BAFF"
+                    placeholderTextColor=colors.primary
                   />
                   <Text style={styles.vs}>-</Text>
                   <TextInput
@@ -704,13 +705,13 @@ const HistorialPartidos2 = ({
                       });
                     }}
                     placeholder="0"
-                    placeholderTextColor="#00BAFF"
+                    placeholderTextColor=colors.primary
                   />
                 </View>
               )}
               {errorMarcador !== "" && (
                 <View style={{ alignSelf: "center", alignItems: "center", justifyContent: "center", flexDirection: "row", gap: 0, marginTop: 10, width: "85%" }}>
-                  <Ionicons name="alert-circle-outline" size={24} color="#C70039" />
+                  <Ionicons name="alert-circle-outline" size={24} color={colors.error} />
                   <Text style={styles.errorText}>{errorMarcador}</Text>
                 </View>
               )}
@@ -755,7 +756,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     textAlign: "center",
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 8,
     borderRadius: 16,
     width: "90%",
@@ -766,7 +767,7 @@ const styles = StyleSheet.create({
   parejaContainer: {
     backgroundColor: "white",
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     borderRadius: 16,
     padding: 10,
     marginBottom: 18,
@@ -782,7 +783,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     marginBottom: 8,
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     width: "70%",
     alignSelf: "center",
     textAlign: "center",
@@ -834,7 +835,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#FFF",
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     width: "70%",
     alignSelf: "center",
     padding: 6,
@@ -852,7 +853,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#FFF",
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 6,
     borderRadius: 16,
     borderWidth: 3,
@@ -866,7 +867,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "#FFF",
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 2,
     borderRadius: 8,
     width: "38%",
@@ -891,9 +892,9 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 8,
     backgroundColor: "#FFF",
-    color: "#00BAFF",
+    color: colors.primary,
     borderWidth: 1.5,
-    borderColor: "#00BAFF",
+    borderColor: colors.primary,
     fontSize: 20,
     fontWeight: "bold",
     textAlign: "center",
@@ -913,7 +914,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   confirmButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     paddingVertical: 8,
     paddingHorizontal: 20,
     borderRadius: 8,
@@ -924,7 +925,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   errorText: {
-    color: "#C70039",
+    color: colors.error,
     fontSize: 11,
     textAlign: "center",
     width: "95%"

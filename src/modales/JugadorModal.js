@@ -12,11 +12,12 @@ import {
 import Icon from "react-native-vector-icons/Ionicons";
 import { RFValue } from "react-native-responsive-fontsize";
 import URL from "../Helper/URL";
+import colors from "../styles/colors";
 
 const { width } = Dimensions.get("window");
 const scale = (size) => (width / 375) * size;
 const colors = {
-  azulMarino: "#00baff",
+  azulMarino: colors.primary,
   blanco: "#fff",
   grisTexto: "#808191",
 };
@@ -57,7 +58,7 @@ const JugadorModal = ({
               onPress={closeModal}
               activeOpacity={0.7}
             >
-              <Icon name="close" size={24} color="#00baff" />
+              <Icon name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -66,7 +67,7 @@ const JugadorModal = ({
             {jugadorLoading ? (
               <ActivityIndicator
                 size="large"
-                color="#00BAFF"
+                color={colors.primary}
                 style={styles.loader}
               />
             ) : !data ||
@@ -233,7 +234,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
   modalHeader: {
     flexDirection: "row",
@@ -247,7 +248,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: RFValue(14, 667),
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
   },
@@ -353,7 +354,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -363,7 +364,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#c70039",
+    backgroundColor: colors.error,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -376,7 +377,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   errorText: {
-    color: "#c70039",
+    color: colors.error,
     fontSize: 14,
     textAlign: "center",
     marginVertical: 16,

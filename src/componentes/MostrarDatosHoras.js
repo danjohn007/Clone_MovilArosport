@@ -64,7 +64,7 @@ export const DurationCounter = ({ value, onChange }) => {
     <View style={styles.inputContainer}>
       <Text style={styles.label}>Duración</Text>
       <View style={styles.originalInputBox}>
-        <Ionicons name="time-outline" size={24} color="#02B9FA" style={styles.icon} />
+        <Ionicons name="time-outline" size={24} color={colors.primary} style={styles.icon} />
         
         <TouchableOpacity 
           style={styles.timeDisplay}
@@ -91,7 +91,7 @@ export const DurationCounter = ({ value, onChange }) => {
                 onPress={() => setShowModal(false)}
                 activeOpacity={0.7}
               >
-                <Ionicons name="close" size={24} color="#00baff" />
+                <Ionicons name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
 
@@ -391,7 +391,7 @@ export const TimeSelector = ({
           activeOpacity={disabled ? 1 : 0.7}
         >
           <View style={styles.textContainer}>
-            <Ionicons name="time-outline" size={24} color="#02B9FA" style={styles.icon} />
+            <Ionicons name="time-outline" size={24} color={colors.primary} style={styles.icon} />
             <Text style={styles.textInput}>{formatTimeDisplay(value)}</Text>
           </View>
         </TouchableOpacity>
@@ -402,7 +402,7 @@ export const TimeSelector = ({
             style={styles.clearButton}
             hitSlop={{ top: 15, bottom: 10, left: 15, right: 20 }}
           >
-            <Ionicons name="close-circle" size={24} color="#02B9FA" />
+            <Ionicons name="close-circle" size={24} color={colors.primary} />
           </TouchableOpacity>
         )}
       </View>
@@ -418,7 +418,7 @@ export const TimeSelector = ({
                   onPress={() => setShowModal(false)}
                   activeOpacity={0.7}
                 >
-                  <Ionicons name="close" size={24} color="#00baff" />
+                  <Ionicons name="close" size={24} color={colors.primary} />
                 </TouchableOpacity>
               </View>
 
@@ -518,7 +518,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#00baff',
+    color: colors.primary,
     marginBottom: 8,
     textTransform: 'uppercase',
   },
@@ -528,7 +528,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     marginBottom: 10,
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -574,7 +574,7 @@ const styles = StyleSheet.create({
     maxHeight: '80%',
     overflow: 'hidden',
     borderWidth: 3,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
   },
   modalHeader: {
     flexDirection: 'row',
@@ -588,7 +588,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#00baff',
+    color: colors.primary,
     textAlign: 'center',
     flex: 1,
   },
@@ -631,7 +631,7 @@ const styles = StyleSheet.create({
     color: '#334155',
   },
   selectedScrollItemText: {
-    color: '#00baff',
+    color: colors.primary,
     fontWeight: 'bold',
   },
   timeSeparator: {
@@ -654,7 +654,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#00baff',
+    backgroundColor: colors.primary,
     padding: 14,
     borderRadius: 8,
     marginTop: 16,
@@ -679,7 +679,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#00baff',
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,

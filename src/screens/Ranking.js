@@ -646,8 +646,8 @@ const Ranking = () => {
             <RefreshControl
               refreshing={isRefreshing}
               onRefresh={handleRefresh}
-              colors={["#02B9FA"]} // color Android
-              tintColor="#02B9FA" // color iOS
+              colors={["colors.primary"]} // color Android
+              tintColor="colors.primary" // color iOS
             />
           }
         >
@@ -763,7 +763,7 @@ const Ranking = () => {
                   paddingHorizontal: 24,
                   borderRadius: 16,
                   borderWidth: 2,
-                  borderColor: "#00baff",
+                  borderColor: "colors.primary",
                   shadowColor: "#000",
                   shadowOpacity: 0.12,
                   shadowRadius: 8,
@@ -815,7 +815,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   subscribeButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     padding: 10,
     paddingHorizontal: 30,
     borderRadius: 50,
@@ -836,11 +836,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff", // Fondo blanco para la modal
     borderRadius: 15,
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     padding: 25,
     alignItems: "center",
     borderWidth: 2,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     elevation: 5, // Solo para Android
     ...Platform.select({
       ios: {
@@ -873,13 +873,13 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   subscribeButtonModal: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 50,
     alignItems: "center",
     borderWidth: 2,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     width: "90%",
   },
   subscribeButtonText: {
@@ -894,12 +894,12 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: "center",
     borderWidth: 2,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     width: "90%",
     marginTop: 10,
   },
   returnButtonText: {
-    color: "#02B9FA",
+    color: "colors.primary",
     fontSize: 16,
     fontWeight: "bold",
   },
@@ -928,7 +928,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -943,7 +943,7 @@ const styles = StyleSheet.create({
   modalTitleSub: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     textTransform: "uppercase",
   },
@@ -973,7 +973,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     padding: 14,
     borderRadius: 8,
     width: "100%",
@@ -984,7 +984,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#c70039",
+    backgroundColor: "colors.error",
     padding: 14,
     borderRadius: 8,
     width: "100%"

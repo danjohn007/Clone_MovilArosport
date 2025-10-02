@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import colors from "../styles/colors";
 
 const ChangePlan = ({ subscriptionId, stripeCustomer, onChangePlan }) => {
   const planAnualDetalles = {
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   button: {
-    backgroundColor: '#00baff',
+    backgroundColor: colors.primary,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
