@@ -11,6 +11,7 @@ import { obtenerHistorialPuntos } from "../componentes/Activos/Americana/RetaApi
 import Ionicons from "react-native-vector-icons/Ionicons";
 import HistorialPartidosReta from "../componentes/HistorialPartidosReta.js";
 import Titulo from "../componentes/Titulo";
+import colors from "../styles/colors";
 
 
 //historial de parejas anterior para la reta (ahora esta extinto)
@@ -228,7 +229,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     borderRadius: 15,
     padding: 20,
     width: "90%",
@@ -282,7 +283,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   btnCerrar: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     marginTop: 10,

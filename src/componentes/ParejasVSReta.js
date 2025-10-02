@@ -708,7 +708,7 @@ const ParejasVSReta = ({
     const errores = validarSet(parseInt(setNumber), scores[0], scores[1]);
     // Solo resaltar si hay errores en este set
     if (errores && errores.length > 0) {
-      return { borderColor: "#C70039", borderWidth: 2 };
+      return { borderColor: "colors.error", borderWidth: 2 };
     }
     return {};
   };
@@ -1043,7 +1043,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     elevation: 5,
     position: "relative",
   },
@@ -1051,7 +1051,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#fff",
     fontWeight: "700",
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     borderRadius: 16,
     paddingVertical: 6,
     paddingHorizontal: 40,
@@ -1101,7 +1101,7 @@ const styles = StyleSheet.create({
   totalTeamScore: {
     fontSize: 18,
     fontFamily: "Poppins-Bold",
-    color: "#02b9fa",
+    color: "colors.primary",
     fontWeight: "700",
     textAlign: "center",
   },
@@ -1123,7 +1123,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginVertical: 1,
-    backgroundColor: "#02b9fa",
+    backgroundColor: "colors.primary",
     borderRadius: 16,
     height: 45,
     borderWidth: 3,
@@ -1132,7 +1132,7 @@ const styles = StyleSheet.create({
     gap: 15,
   },
   currentSetRow: {
-    backgroundColor: "#02b9fa",
+    backgroundColor: "colors.primary",
   },
   setInfoContainer: {
     flexDirection: "row",
@@ -1149,7 +1149,7 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
   currentSetIndicator: {
-    color: "#02b9fa",
+    color: "colors.primary",
     fontSize: 24,
     marginLeft: 4,
     lineHeight: 20,
@@ -1164,7 +1164,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   currentScoreInput: {
-    borderColor: "#02b9fa",
+    borderColor: "colors.primary",
     color: "white",
   },
   ganadoresText: {
@@ -1210,7 +1210,7 @@ const styles = StyleSheet.create({
   errorText: {
     fontSize: 11,
     fontFamily: "Poppins-Bold",
-    color: "#C70039",
+    color: "colors.error",
     textAlign: "center",
   },
   containerErrors: {
@@ -1227,7 +1227,7 @@ const styles = StyleSheet.create({
   //TIEBREAK estilos
   tiebreakScoreTextContainer: {
     alignItems: "center",
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     borderRadius: 16,
     padding: 8,
     borderWidth: 3,
@@ -1268,7 +1268,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   prevButton: {
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     padding: 12,
     borderRadius: 16,
     width: "15%",
@@ -1277,7 +1277,7 @@ const styles = StyleSheet.create({
     borderColor: "#FFF",
   },
   nextButton: {
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     padding: 12,
     borderRadius: 16,
     width: "15%",
@@ -1286,7 +1286,7 @@ const styles = StyleSheet.create({
     borderColor: "#FFF",
   },
   finishButton: {
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     paddingVertical: 10,
     borderRadius: 30,
     width: 205,

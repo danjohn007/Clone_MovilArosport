@@ -14,6 +14,7 @@ import UbiMostrar from './UbiMostrar';
 import BotonesChicos from '../componentes/BotonesChicos';
 import TablaHorariosModal from '../componentes/TablaHorariosModal';
 import moment from 'moment';
+import colors from "../styles/colors";
 
 const RETURN_URL = "prorally-movil://stripe-redirect";
 
@@ -654,7 +655,7 @@ const obtenerNombreCancha = (id, canchas) => {
                       <Modal transparent={true} animationType="fade" visible={loading2}>
                         <View style={styles.modalContainer2}>
                           <View style={styles.modalContent2}>
-                            <ActivityIndicator size="large" color="#02B9FA" />
+                            <ActivityIndicator size="large" color={colors.primary} />
                             <Text style={styles.loadingText}>
                               Procesando reservación...
                             </Text>
@@ -754,7 +755,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     padding: 15,
     marginTop: 15,
     alignSelf: 'center',
@@ -786,14 +787,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent2: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
@@ -802,7 +803,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: colors.primary,
   },  
 });
 

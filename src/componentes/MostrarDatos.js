@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { RFValue } from "react-native-responsive-fontsize";
+import colors from "../styles/colors";
 
 const MostrarDatos = ({
   errorStyles = false,
@@ -34,7 +35,7 @@ const MostrarDatos = ({
         <Ionicons
           name={iconName}
           size={24}
-          color="#02B9FA"
+          color={colors.primary}
           style={styles.icon}
         />
         <TextInput
@@ -55,7 +56,7 @@ const MostrarDatos = ({
             <Ionicons
               name={secureTextEntry ? "eye-off-outline" : "eye-outline"} // Cambié los íconos por los de ojo
               size={20}
-              color="#00BAFF"
+              color={colors.primary}
             />
           </TouchableOpacity>
         )}
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "white",
     borderRadius: 16,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     marginBottom: 10,
     paddingHorizontal: 10,
     paddingVertical: 5,

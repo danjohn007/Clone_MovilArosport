@@ -81,7 +81,7 @@ React.useEffect(() => {
         onPress={() => !disabled && setIsPickerVisible(true)}
         disabled={disabled}
       >
-        <Ionicons name="calendar-outline" size={24} color="#02B9FA" style={styles.icon} />
+        <Ionicons name="calendar-outline" size={24} color={colors.primary} style={styles.icon} />
         <Text style={[styles.textInput]}>
           {formatDate(selectedDate)}
         </Text>
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     marginBottom: 10,
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   },
   closeButtonText: {
     fontSize: 16,
-    color: '#02B9FA', // Color personalizado para el botón de cierre
+    color: colors.primary, // Color personalizado para el botón de cierre
     fontWeight: 'bold',
   },
 });

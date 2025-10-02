@@ -30,7 +30,7 @@ const GameInfoModal = ({ visible, onClose, gameTypes, selectedIndex }) => {
               {(game.mod_nombre || "").toUpperCase()}
             </Text>
             <TouchableOpacity style={styles.closeButton} onPress={onClose}>
-              <Ionicons name="close" size={24} color="#00baff" />
+              <Ionicons name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
   },
 
   // Encabezado
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
     marginRight: -28, // Compensa el espacio del botón para un centrado perfecto
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: "colors.primary",
     marginBottom: 8,
     textTransform: "uppercase",
   },

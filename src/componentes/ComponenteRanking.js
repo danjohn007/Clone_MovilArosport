@@ -35,7 +35,7 @@ const ComponenteRanking = ({ position, nombre, puntos }) => {
 const styles = StyleSheet.create({
   frameParent: {
     borderRadius: 20,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     borderWidth: 2,
     flexDirection: 'row',
     backgroundColor: '#fff',
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   positionWrapper: {
     borderRadius: 20,
-    backgroundColor: '#02b9fa',
+    backgroundColor: colors.primary,
     width: 27,
     paddingHorizontal: 1,
     paddingVertical: 5,
@@ -94,11 +94,11 @@ const styles = StyleSheet.create({
   },
   vectorIcon: {
     fontSize: 19,
-    color: '#00baff',
+    color: colors.primary,
   },
   text1: {
     fontSize: 15,
-    color: '#00baff',
+    color: colors.primary,
     textAlign: 'right',
     minWidth: 40, // garantiza espacio mínimo para número
   },

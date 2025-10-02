@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: '#00BAFF',
+    borderColor: colors.primary,
     padding: 15,
     paddingVertical: 8,
     alignItems: 'center',
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     //fontFamily: 'Poppins-Bold',
-    color: '#00BAFF',
+    color: colors.primary,
     fontWeight: 'bold',
     marginBottom: 2,
     textTransform: 'uppercase',
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   jugadorContainer: {
     padding: 6,
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     borderRadius: 10,
     width: '100%',
     alignItems: 'center',

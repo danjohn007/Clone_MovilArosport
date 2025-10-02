@@ -34,7 +34,7 @@ const SelectCategoria = ({ selectedCategoria, onChangeCategoria }) => {
     <View style={styles.inputContainer}>
       <View style={styles.inputBox}>
         {loading ? (
-          <ActivityIndicator size="small" color="#00BAFF" />
+          <ActivityIndicator size="small" color={colors.primary} />
         ) : (
           <Picker
           selectedValue={selectedCategoria} // Valor actual seleccionado (ID de la categoría como string)
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     marginTop: "6%",
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     padding: 10,
     marginBottom: 10,
     color: '#000',

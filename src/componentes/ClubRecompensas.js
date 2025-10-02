@@ -158,7 +158,7 @@ const Club = ({ route }) => {
           ListEmptyComponent={
             loading ? (
               <View style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color="#00baff" />
+                <ActivityIndicator size="large" color={colors.primary} />
                 <Text style={styles.loadingText}>Cargando recompensas...</Text>
               </View>
             ) : (
@@ -174,8 +174,8 @@ const Club = ({ route }) => {
             <RefreshControl
               refreshing={refreshing}
               onRefresh={handleRefresh}
-              colors={["#00baff"]}
-              tintColor="#00baff"
+              colors={["colors.primary"]}
+              tintColor="colors.primary"
             />
           }
           style={styles.scrollView}
@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
   },
   notificationBadge: {
     borderRadius: 25,
-    backgroundColor: "#02b9fa",
+    backgroundColor: "colors.primary",
     justifyContent: "center",
     alignItems: "center",
     height: 50,
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
   pointsCard: {
     backgroundColor: "#FFFFFF",
     borderRadius: 16,
-    borderColor: "#00BAFF",
+    borderColor: "colors.primary",
     borderWidth: 3,
     padding: 20,
     flexDirection: "row",
@@ -301,7 +301,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   pointsContainer: {
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     borderRadius: 27.5, 
     width: 55,
     height: 55,

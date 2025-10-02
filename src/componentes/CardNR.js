@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import colors from "../styles/colors";
 
 const CardNR = ({
   imageSource,
@@ -48,12 +49,12 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginBottom: 24,
     overflow: "hidden",
-    shadowColor: "#00BAFF",
+    shadowColor: colors.primary,
     shadowOpacity: 0.3,
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 8,
     elevation: 5,
-    borderColor: "#00BAFF",
+    borderColor: colors.primary,
     borderWidth: 3,
   },
   imageContainer: {
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#00BAFF",
+    color: colors.primary,
     textAlign: "left",
     marginBottom: 6,
   },

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Modal, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import colors from "../styles/colors";
 
 const HistorialTresSets = ({ visible, closeModal, data, onTerminar }) => {
 
@@ -213,7 +214,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 15,
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     padding: 20,
     width: '90%',
     maxHeight: '80%',

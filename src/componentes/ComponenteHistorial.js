@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   historial1: {
         fontWeight: "900",
         fontFamily: "Inter-Black",
-        color: "#02b9fa",
+        color: "colors.primary",
         top: 0,
         left: 0,
         textAlign: "left",
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
         paddingVertical: 9,
         paddingHorizontal: 10,
         justifyContent: "flex-end",
-        borderColor: "#00baff",
+        borderColor: "colors.primary",
         borderRadius: 11,
         alignSelf: "stretch"
   },
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
         paddingVertical: 9,
         paddingHorizontal: 10,
         justifyContent: "flex-end",
-        borderColor: "#00baff",
+        borderColor: "colors.primary",
         borderRadius: 11,
         borderWidth: 3,
         borderStyle: "solid",

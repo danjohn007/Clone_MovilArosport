@@ -17,7 +17,7 @@ const CardInicio = ({ imageSource, title, subtitle, onPress }) => {
           <Icon
             name="chevron-forward"
             size={22}
-            color={"#00baff"}
+            color={"colors.primary"}
             style={styles.chevronIcon}
           />
         </View>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 5,
     elevation: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
   },
   imageContainer: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#00baff',
+    color: colors.primary,
     textAlign: 'left',
     marginBottom: 5,
   },

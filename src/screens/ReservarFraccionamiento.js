@@ -407,7 +407,7 @@ const ReservarFraccionamiento = () => {
             <Titulo titulo="Reservar Cancha" />
 
             {loading ? (
-                <ActivityIndicator size="large" color="#02B9FA" />
+                <ActivityIndicator size="large" color={colors.primary} />
             ) : (
                 <View>
                     {/* Paso 1: Seleccionar fecha */}
@@ -517,7 +517,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white', 
         borderRadius: 10, 
         borderWidth: 3, 
-        borderColor: '#02B9FA', 
+        borderColor: colors.primary, 
         padding: 15, 
         marginTop: 15, 
         alignSelf: 'center' 
@@ -535,14 +535,14 @@ const styles = StyleSheet.create({
         marginBottom: 3
     },
     mensajeInfo: {
-        color: '#02B9FA',
+        color: colors.primary,
         textAlign: 'center',
         fontSize: 14,
         marginVertical: 10,
         fontStyle: 'italic'
     },
     sectionTitle: {
-        color: '#02B9FA',
+        color: colors.primary,
         fontSize: 16,
         fontWeight: 'bold',
         marginTop: 20,
@@ -553,7 +553,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 10,
         borderWidth: 2,
-        borderColor: '#02B9FA',
+        borderColor: colors.primary,
         padding: 15,
         marginVertical: 8,
         marginHorizontal: '6%'
@@ -578,7 +578,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     selectButtonActive: {
-        backgroundColor: '#02B9FA'
+        backgroundColor: colors.primary
     },
     selectButtonText: {
         color: 'white',

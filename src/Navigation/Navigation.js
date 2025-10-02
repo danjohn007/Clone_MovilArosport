@@ -533,7 +533,7 @@ function MainNavigator() {
           tabBarIcon: ({ size, focused }) =>
             focused ? (
               <View style={styles.iconContainer}>
-                <View style={[styles.circle, { backgroundColor: "#00BAFF" }]} />
+                <View style={[styles.circle, { backgroundColor: "colors.primary" }]} />
                 <Ionicons
                   name="tennisball"
                   size={size}
@@ -543,7 +543,7 @@ function MainNavigator() {
               </View>
             ) : (
               <View style={styles.iconContainer}>
-                <View style={[styles.circle, { backgroundColor: "#00BAFF" }]} />
+                <View style={[styles.circle, { backgroundColor: "colors.primary" }]} />
                 <Ionicons
                   name="tennisball-outline"
                   size={size}
@@ -567,7 +567,7 @@ function MainNavigator() {
                 <Ionicons
                   name="list-sharp"
                   size={size}
-                  color="#00BAFF"
+                  color={colors.primary}
                   style={{ alignSelf: "center", marginTop: 3 }}
                 />
               </View>
@@ -577,7 +577,7 @@ function MainNavigator() {
                 <Ionicons
                   name="list-outline"
                   size={size}
-                  color="#00BAFF"
+                  color={colors.primary}
                   style={{ alignSelf: "center", marginTop: 3 }}
                 />
               </View>
@@ -698,7 +698,7 @@ const styles = StyleSheet.create({
     width: 41,
     height: 41,
     borderRadius: 25,
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     top: -5,
     justifyContent: "center",
     alignItems: "center",

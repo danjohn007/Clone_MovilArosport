@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: "rgba(255, 255, 255, 0.86)",
         borderStyle: "solid",
-        borderColor: "#02b9fa",
+        borderColor: "colors.primary",
         borderWidth: 2,
         flexDirection: "row",
         alignItems: "center",

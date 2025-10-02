@@ -4,6 +4,7 @@ import {
   Text,
 } from "react-native";
 import React, { useState, useEffect } from "react";
+import colors from "../styles/colors";
 
 
 //modal
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 1)", // Fondo blanco translúcido
     borderRadius: 15,
     borderWidth: 2,
-    borderColor: "#00baff", // Color del borde
+    borderColor: colors.primary, // Color del borde
     padding: 20,
     width: "85%",
     shadowColor: "#000",
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     padding: 15,
     marginTop: 15,
     alignSelf: "center",

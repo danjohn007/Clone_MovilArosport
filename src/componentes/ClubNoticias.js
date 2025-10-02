@@ -12,6 +12,7 @@ import CardNR from "../componentes/CardNR";
 import URL from "../Helper/URL";
 import SwiperList from "../componentes/SwiperList";
 import { Center } from "native-base";
+import colors from "../styles/colors";
 
 const ClubNoticias = ({ route }) => {
   const { clubName, id } = route.params || {};
@@ -110,8 +111,8 @@ const ClubNoticias = ({ route }) => {
             <RefreshControl
               refreshing={refreshing}
               onRefresh={handleRefresh}
-              colors={["#00baff"]}
-              tintColor="#00baff"
+              colors={[colors.primary]}
+              tintColor=colors.primary
             />
           }
           style={styles.scrollView}

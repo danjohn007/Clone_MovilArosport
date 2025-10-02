@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   frameWrapper: {
     backgroundColor: "#FFF",
     borderWidth: 3,
-    borderColor: "#00BAFF",
+    borderColor: "colors.primary",
     borderRadius: 16,
     padding: 15,
     flexDirection: "row",
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   titleGame: {
-    color: "#00BAFF",
+    color: "colors.primary",
     fontSize: 17,
     fontWeight: "bold",
   },
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 8,
-    color: "#00BAFF",
+    color: "colors.primary",
     minWidth: 20,
   },
   optionsColumn: {
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   optionsButtons: {
-    backgroundColor: "#00BAFF",
+    backgroundColor: "colors.primary",
     padding: 12,
     borderRadius: 16,
     width: "90%",

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Modal, Platform } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import colors from "../styles/colors";
 
 const MostrarCalendario = ({ placeholder = "Seleccionar fecha", selectedValue, onValueChange }) => {
   const [isPickerVisible, setIsPickerVisible] = useState(false);
@@ -67,7 +68,7 @@ const MostrarCalendario = ({ placeholder = "Seleccionar fecha", selectedValue, o
         style={styles.inputBox} 
         onPress={() => setIsPickerVisible(true)}
       >
-        <Ionicons name="calendar-outline" size={24} color="#02B9FA" style={styles.icon} />
+        <Ionicons name="calendar-outline" size={24} color={colors.primary} style={styles.icon} />
         <Text style={[
           styles.textInput,
           styles.selectedText
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     paddingVertical: 10,
     paddingHorizontal: 15,
     width: '100%', // Cambiado de 88% a 100%
@@ -158,7 +159,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
   },
   closeButton: {
     marginTop: 10,
@@ -166,7 +167,7 @@ const styles = StyleSheet.create({
   },
   closeButtonText: {
     fontSize: 16,
-    color: '#02B9FA', // Color personalizado para el botón de cierre
+    color: colors.primary, // Color personalizado para el botón de cierre
     fontWeight: 'bold',
   },
 });

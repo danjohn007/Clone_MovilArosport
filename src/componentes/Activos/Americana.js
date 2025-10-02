@@ -1274,7 +1274,7 @@ const Americana = ({ juego, onTerminarJuego }) => {
         {esperandoCreador ? (
           // Estado de carga: aún no se sabe si están listos o no
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>Cargando...</Text>
           </View>
         ) : !jugadasRegistradas ? (
@@ -1524,7 +1524,7 @@ const Americana = ({ juego, onTerminarJuego }) => {
       <Modal transparent={true} animationType="fade" visible={modalCargando}>
         <View style={styles.loadingOverlay}>
           <View style={styles.loadingModal}>
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>Terminando el juego...</Text>
           </View>
         </View>
@@ -1532,7 +1532,7 @@ const Americana = ({ juego, onTerminarJuego }) => {
       <Modal transparent={true} animationType="fade" visible={loading2}>
         <View style={styles.loadingOverlay}>
           <View style={styles.loadingModal}>
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>Guardando ronda...</Text>
           </View>
         </View>
@@ -1588,7 +1588,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   buttonJugadores: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 16,
@@ -1597,7 +1597,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonHistorial: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 16,
@@ -1634,7 +1634,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: "#02B9FA",
+    color: "colors.primary",
     fontWeight: "500",
   },
 });

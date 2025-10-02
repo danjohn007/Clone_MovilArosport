@@ -10,6 +10,7 @@ import {
 import HistorialPartidos from "../componentes/HistorialPartidos";
 import { obtenerRondasAmericana } from "../componentes/Activos/Americana/AmericanaApiService.js";
 import { useAuth } from "../screens/Auth/AuthContext.js";
+import colors from "../styles/colors";
 
 const HistorialPuntos = ({ visible, closeModal, juegoId, onTerminar }) => {
   console.log("id juego de historial", juegoId);
@@ -137,7 +138,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
     borderRadius: 15,
     padding: 20,
     width: "90%",

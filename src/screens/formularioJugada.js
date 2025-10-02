@@ -2025,7 +2025,7 @@ const formularioJugada = ({
       <Modal transparent={true} animationType="fade" visible={loading2}>
         <View style={styles.modalContainer2}>
           <View style={styles.modalContent2}>
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>Creando jugada...</Text>
           </View>
         </View>
@@ -2387,7 +2387,7 @@ const formularioJugada = ({
                           <Ionicons
                             name="calendar-outline"
                             size={24}
-                            color="#02B9FA"
+                            color={colors.primary}
                             style={{ marginRight: 8, width: 32 }} // 🎯 ANCHO FIJO
                           />
                           <Text
@@ -2417,7 +2417,7 @@ const formularioJugada = ({
                           <Ionicons
                             name="location-outline"
                             size={24}
-                            color="#02B9FA"
+                            color={colors.primary}
                             style={{ marginRight: 8, width: 32 }} // 🎯 ANCHO FIJO
                           />
                           <Text
@@ -2447,7 +2447,7 @@ const formularioJugada = ({
                           <Ionicons
                             name="time-outline"
                             size={24}
-                            color="#02B9FA"
+                            color={colors.primary}
                             style={{ marginRight: 8, width: 32 }} // 🎯 ANCHO FIJO
                           />
                           <Text
@@ -2478,7 +2478,7 @@ const formularioJugada = ({
                           <Ionicons
                             name="timer-outline"
                             size={24}
-                            color="#02B9FA"
+                            color={colors.primary}
                             style={{ marginRight: 8, width: 32 }} // 🎯 ANCHO FIJO
                           />
                           <Text
@@ -2661,7 +2661,7 @@ const styles = StyleSheet.create({
     justifyContent: "center", // Centra el contenido
     alignSelf: "center", // Centra el contenedor en la pantalla
     borderWidth: 3,
-    borderColor: "#02B9FA", // Color del borde
+    borderColor: "colors.primary", // Color del borde
     marginBottom: 10,
     width: width * 0.825,
     height: 52,
@@ -2695,10 +2695,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: "colors.primary",
   },
   errorText: {
-    color: "#C70039",
+    color: "colors.error",
     fontSize: 12,
     marginTop: -5,
     marginBottom: 10,
@@ -2724,7 +2724,7 @@ const styles = StyleSheet.create({
     color: "#333",
   },
   selectedItem: {
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
   },
 });
 

@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import countries from '../../assets/countries.json';
 import states from '../../assets/states.json';
+import colors from "../styles/colors";
 
 const ModalUbicationFilter = ({
   visible,
@@ -127,7 +128,7 @@ const ModalUbicationFilter = ({
               keyboardShouldPersistTaps="handled"
             />
           ) : loading ? (
-            <ActivityIndicator size="large" color="#00baff" style={{ marginTop: 20 }} />
+            <ActivityIndicator size="large" color={colors.primary} style={{ marginTop: 20 }} />
           ) : (
             <FlatList
               data={estados}
@@ -161,7 +162,7 @@ const styles = StyleSheet.create({
     width: '90%',
     maxHeight: '80%',
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     backgroundColor: '#fff',
     borderRadius: 16,
     padding: 20,
@@ -191,7 +192,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   btnCerrar: {
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     marginTop: 10,

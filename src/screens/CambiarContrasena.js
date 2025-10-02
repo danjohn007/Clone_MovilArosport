@@ -148,15 +148,15 @@ const CambiarContrasena = () => {
         <View style={styles.instructionsContainer}>
           <Text style={styles.sectionTitle}>Requisitos:</Text>
           <View style={styles.instructionItem}>
-            <Icon name="checkmark-circle" size={16} color="#00BAFF" />
+            <Icon name="checkmark-circle" size={16} color={colors.primary} />
             <Text style={styles.instructionText}>Al menos 8 caracteres</Text>
           </View>
           <View style={styles.instructionItem}>
-            <Icon name="checkmark-circle" size={16} color="#00BAFF" />
+            <Icon name="checkmark-circle" size={16} color={colors.primary} />
             <Text style={styles.instructionText}>Al menos un número</Text>
           </View>
           <View style={styles.instructionItem}>
-            <Icon name="checkmark-circle" size={16} color="#00BAFF" />
+            <Icon name="checkmark-circle" size={16} color={colors.primary} />
             <Text style={styles.instructionText}>
               Al menos un carácter especial (!@#$%^&*)
             </Text>
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 12,
-    color: "#C70039",
+    color: "colors.error",
     marginTop: 2,
     marginLeft: 4,
   },

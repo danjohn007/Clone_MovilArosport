@@ -21,6 +21,7 @@ import APIManager from "../componentes/API/APIManager.jsx";
 import { useAuth } from "../screens/Auth/AuthContext";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import Categorias from "../componentes/Categorias";
+import colors from "../styles/colors";
 
 const { width, height } = Dimensions.get("window");
 
@@ -255,7 +256,7 @@ const AgregarJugadores = ({
                 closeModal();
               }}
             >
-              <Icon name="close" size={25} color="#02B9FA" />
+              <Icon name="close" size={25} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -274,7 +275,7 @@ const AgregarJugadores = ({
                     <ActivityIndicator
                       style={styles.addIcon}
                       size="small"
-                      color="#02B9FA"
+                      color={colors.primary}
                     />
                   ) : (
                     <TouchableOpacity
@@ -285,7 +286,7 @@ const AgregarJugadores = ({
                       }}
                     >
                       <View style={styles.addIcon}>
-                        <Icon name="add-circle" size={24} color="#02B9FA" />
+                        <Icon name="add-circle" size={24} color={colors.primary} />
                       </View>
                     </TouchableOpacity>
                   ))}
@@ -298,7 +299,7 @@ const AgregarJugadores = ({
                 <View style={styles.resultadosContainer}>
                   {buscando ? (
                     <View style={{ padding: 20, alignItems: "center" }}>
-                      <ActivityIndicator size="large" color="#02B9FA" />
+                      <ActivityIndicator size="large" color={colors.primary} />
                       <Text style={{ marginTop: 10 }}>
                         Buscando jugadores...
                       </Text>
@@ -355,7 +356,7 @@ const AgregarJugadores = ({
                     <TouchableOpacity
                       onPress={() => handleEliminarJugador(item.id_jugador)}
                     >
-                      <Icon name="close-circle" size={25} color="#c70039" />
+                      <Icon name="close-circle" size={25} color={colors.error} />
                     </TouchableOpacity>
                   </View>
                 )}
@@ -405,7 +406,7 @@ const AgregarJugadores = ({
                   setCategoriaManual(null);
                 }}
               >
-                <Icon name="close" size={25} color="#02B9FA" />
+                <Icon name="close" size={25} color={colors.primary} />
               </TouchableOpacity>
             </View>
 
@@ -413,7 +414,7 @@ const AgregarJugadores = ({
             <View style={styles.detailsContainer}>
               <Text style={styles.sectionTitleCustom}>JUGADOR</Text>
               <View style={styles.inputContainerCustom}>
-                <Icon name="person-outline" size={18} color="#00baff" />
+                <Icon name="person-outline" size={18} color={colors.primary} />
                 <Text style={styles.playerNameCustom}>{nuevoNombreManual}</Text>
               </View>
               <Text style={styles.sectionTitleCustom}>CATEGORÍA</Text>
@@ -494,7 +495,7 @@ const styles = StyleSheet.create({
   sectionTitleCustom: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 8,
     textTransform: "uppercase",
   },
@@ -528,7 +529,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -555,7 +556,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
 
   // Encabezado (copiado de InvitacionesModal)
@@ -572,7 +573,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 18,
-    color: "#02B9FA",
+    color: colors.primary,
     textTransform: "uppercase",
     textAlign: "center",
     fontWeight: "700",
@@ -694,7 +695,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -704,7 +705,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#c70039",
+    backgroundColor: colors.error,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -714,7 +715,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,
@@ -745,7 +746,7 @@ const styles = StyleSheet.create({
     borderColor: "#e2e8f0",
   },
   addButton: {
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
   },

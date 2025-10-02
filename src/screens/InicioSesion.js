@@ -261,7 +261,7 @@ const InicioSesion = () => {
               <Icon
                 name="alert-circle-outline"
                 size={16}
-                color="#C70039"
+                color={colors.error}
                 style={styles.errorIcon}
               />
               <Text style={styles.errorText}>{errorCorreo}</Text>
@@ -272,7 +272,7 @@ const InicioSesion = () => {
               <Icon
                 name="alert-circle-outline"
                 size={16}
-                color="#C70039"
+                color={colors.error}
                 style={styles.errorIcon}
               />
               <Text style={styles.errorText}>{errorContrasena}</Text>
@@ -385,7 +385,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 12,
-    color: "#C70039",
+    color: "colors.error",
     marginTop: 2,
     marginLeft: 4,
   },

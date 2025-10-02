@@ -66,7 +66,7 @@ const Ubicacion = ({ visible, closeModal, id, tipo = "fraccionamiento" }) => {
               style={styles.closeButtonHeader}
               onPress={closeModal}
             >
-              <Ionicons name="close" size={24} color="#00baff" />
+              <Ionicons name="close" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -74,7 +74,7 @@ const Ubicacion = ({ visible, closeModal, id, tipo = "fraccionamiento" }) => {
           <View style={styles.contentContainer}>
             {loading ? (
               <View style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color="#00baff" />
+                <ActivityIndicator size="large" color={colors.primary} />
               </View>
             ) : direccion ? (
               <>
@@ -104,7 +104,7 @@ const Ubicacion = ({ visible, closeModal, id, tipo = "fraccionamiento" }) => {
                   <Ionicons
                     name="location-outline"
                     size={20}
-                    color="#00baff"
+                    color={colors.primary}
                     style={{ marginRight: 6 }}
                   />
                   <Text style={styles.direccionLabel}>Dirección:</Text>
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     maxWidth: 500,
     maxHeight: "90%",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     overflow: "hidden",
     paddingBottom: 20,
   },
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
     marginLeft: 24,

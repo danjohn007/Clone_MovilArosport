@@ -17,6 +17,7 @@ import APIManager from "../componentes/API/APIManager.jsx";
 import Categorias from "../componentes/Categorias";
 import URL from "../Helper/URL";
 import { agregarJugadorPendientes } from "../componentes/Activos/Americana/RetaApiService";
+import colors from "../styles/colors";
 
 const { width } = Dimensions.get("window");
 const BASE_ICON = require("../../assets/icon_no_profile.png");
@@ -310,7 +311,7 @@ const EditarJugadas = ({ visible, closeModal, id_juego, id_user }) => {
         </Text>
       </View>
       <TouchableOpacity onPress={() => handleEliminarJugador(item)}>
-        <Icon name="close-circle" size={25} color="#c70039" />
+        <Icon name="close-circle" size={25} color={colors.error} />
       </TouchableOpacity>
     </View>
   );
@@ -329,7 +330,7 @@ const EditarJugadas = ({ visible, closeModal, id_juego, id_user }) => {
                 closeModal();
               }}
             >
-              <Icon name="close" size={25} color="#02B9FA" />
+              <Icon name="close" size={25} color={colors.primary} />
             </TouchableOpacity>
           </View>
 
@@ -348,7 +349,7 @@ const EditarJugadas = ({ visible, closeModal, id_juego, id_user }) => {
                     <ActivityIndicator
                       style={styles.addIcon}
                       size="small"
-                      color="#02B9FA"
+                      color={colors.primary}
                     />
                   ) : (
                     <View
@@ -361,7 +362,7 @@ const EditarJugadas = ({ visible, closeModal, id_juego, id_user }) => {
                         }, 150);
                       }}
                     >
-                      <Icon name="add-circle" size={24} color="#02B9FA" />
+                      <Icon name="add-circle" size={24} color={colors.primary} />
                     </View>
                   ))}
               </View>
@@ -372,7 +373,7 @@ const EditarJugadas = ({ visible, closeModal, id_juego, id_user }) => {
                 <View style={styles.resultadosContainer}>
                   {buscando ? (
                     <View style={{ padding: 20, alignItems: "center" }}>
-                      <ActivityIndicator size="large" color="#02B9FA" />
+                      <ActivityIndicator size="large" color={colors.primary} />
                       <Text style={{ marginTop: 10 }}>
                         Buscando jugadores...
                       </Text>
@@ -504,14 +505,14 @@ const EditarJugadas = ({ visible, closeModal, id_juego, id_user }) => {
                 }}
                 activeOpacity={0.7}
               >
-                <Icon name="close" size={24} color="#00baff" />
+                <Icon name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
             {/* Contenido */}
             <View style={styles.modalContentCustom}>
               <Text style={styles.sectionTitleCustom}>JUGADOR</Text>
               <View style={styles.inputContainerCustom}>
-                <Icon name="person-outline" size={18} color="#00baff" />
+                <Icon name="person-outline" size={18} color={colors.primary} />
                 <Text style={styles.playerNameCustom}>{nuevoNombreManual}</Text>
               </View>
               <Text style={styles.sectionTitleCustom}>CATEGORÍA</Text>
@@ -596,7 +597,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
   titleModal: {
     flexDirection: "row",
@@ -610,7 +611,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
     textTransform: "uppercase",
@@ -755,14 +756,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,
     marginLeft: 8,
   },
   sectionTitle: {
-    color: "#00baff",
+    color: colors.primary,
     fontWeight: "bold",
     fontSize: 14,
     textTransform: "uppercase",
@@ -786,7 +787,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
   modalHeaderCustom: {
     flexDirection: "row",
@@ -800,7 +801,7 @@ const styles = StyleSheet.create({
   modalTitleCustom: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
   },
@@ -814,7 +815,7 @@ const styles = StyleSheet.create({
   sectionTitleCustom: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 8,
     textTransform: "uppercase",
   },
@@ -848,7 +849,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,

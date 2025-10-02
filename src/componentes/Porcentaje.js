@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
 		borderRadius: 38.5, // Hace que el contenedor sea circular (mitad del ancho/alto)
 		backgroundColor: "white", // Fondo blanco
 		borderWidth: 2, // Ancho del borde
-		borderColor: "#02b9fa", // Color del borde azul
+		borderColor: "colors.primary", // Color del borde azul
 		top: "80%", // Mueve al centro vertical
 	    left: "37%", // Mueve al centro horizontal
   	},

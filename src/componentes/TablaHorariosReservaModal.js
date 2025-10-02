@@ -126,7 +126,7 @@ const TablaHorariosReservaModal = ({ visible, closeModal, horarios, onSelect, se
             p={4}
             borderRadius="15"
             borderWidth="2"
-            borderColor="#02B9FA"
+            borderColor={colors.primary}
           >
             <Titulo titulo="HORARIOS" />
             <TextInput
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
         btnCerrar: {
-      backgroundColor: '#02B9FA',
+      backgroundColor: colors.primary,
       padding: 12,
       borderRadius: 8,
       marginTop: 10,
@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
   modalButton: {
     flex: 1,
     padding: 10,
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     borderRadius: 5,
     alignItems: 'center',
     marginHorizontal: 5,

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   comingSoonText: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#02B9FA', // Color del texto principal
+    color: colors.primary, // Color del texto principal
     textTransform: 'uppercase',
   },
   onlineStoreText: {

@@ -159,12 +159,12 @@ const MisTorneos = () => {
         </Text>
 
         <View style={styles.infoRow}>
-          <Icon name="location-outline" size={16} color="#00baff" />
+          <Icon name="location-outline" size={16} color={colors.primary} />
           <Text style={styles.torneoText}>{capitalizar(item.fracci)}</Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Icon name="calendar-outline" size={16} color="#00baff" />
+          <Icon name="calendar-outline" size={16} color={colors.primary} />
           <Text style={styles.torneoText}>
             {formatearFecha(item.torneo_fecha)}
           </Text>
@@ -198,7 +198,7 @@ const MisTorneos = () => {
               styles.bracketButton,
               {
                 backgroundColor:
-                  item?.torneo_completo === 1 ? "#00baff" : "#808191",
+                  item?.torneo_completo === 1 ? "colors.primary" : "#808191",
               },
             ]}
             activeOpacity={0.8}
@@ -258,13 +258,13 @@ const MisTorneos = () => {
                 onPress={() => setShowExtraModal(false)}
                 activeOpacity={0.7}
               >
-                <Icon name="close" size={24} color="#00baff" />
+                <Icon name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
             {isLoading && (
               <View style={styles.loadingContainer}>
                 <Text style={styles.loadingText}>Cargando...</Text>
-                <ActivityIndicator size="large" color="#02B9FA" />
+                <ActivityIndicator size="large" color={colors.primary} />
               </View>
             )}
             {idTorneoSeleccionado && (
@@ -290,7 +290,7 @@ const MisTorneos = () => {
                 onPress={closeModal}
                 activeOpacity={0.7}
               >
-                <Icon name="close" size={24} color="#00baff" />
+                <Icon name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
 
@@ -300,7 +300,7 @@ const MisTorneos = () => {
                 <Icon
                   name="trophy-outline"
                   size={18}
-                  color="#00baff"
+                  color={colors.primary}
                   style={styles.detailIcon}
                 />
                 <View>
@@ -315,7 +315,7 @@ const MisTorneos = () => {
                 <Icon
                   name="location-outline"
                   size={18}
-                  color="#00baff"
+                  color={colors.primary}
                   style={styles.detailIcon}
                 />
                 <View>
@@ -330,7 +330,7 @@ const MisTorneos = () => {
                 <Icon
                   name="calendar-outline"
                   size={18}
-                  color="#00baff"
+                  color={colors.primary}
                   style={styles.detailIcon}
                 />
                 <View>
@@ -345,7 +345,7 @@ const MisTorneos = () => {
                 <Icon
                   name="pricetag-outline"
                   size={18}
-                  color="#00baff"
+                  color={colors.primary}
                   style={styles.detailIcon}
                 />
                 <View>
@@ -360,7 +360,7 @@ const MisTorneos = () => {
                 <Icon
                   name="list-outline"
                   size={18}
-                  color="#00baff"
+                  color={colors.primary}
                   style={styles.detailIcon}
                 />
                 <View>
@@ -400,7 +400,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginBottom: 16,
     backgroundColor: "#ffffff",
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
     borderRadius: 16,
     padding: 12,
@@ -431,7 +431,7 @@ const styles = StyleSheet.create({
   torneoNombre: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     marginBottom: 8,
   },
   infoRow: {
@@ -458,9 +458,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     borderWidth: 1,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 6,
@@ -489,7 +489,7 @@ const styles = StyleSheet.create({
     fontSize: RFValue(10, 667),
   },
   actionButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     padding: 8,
     borderRadius: 5,
     marginRight: 10,
@@ -523,7 +523,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 1)", // Fondo blanco translúcido
     borderRadius: 15,
     borderWidth: 2,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
     padding: 20,
     width: "85%",
     shadowColor: "#000",
@@ -536,7 +536,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     width: "100%",
     maxWidth: 400,
     maxHeight: "80%",
@@ -554,7 +554,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: RFValue(14, 667),
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     textAlign: "center",
     flex: 1,
   },
@@ -606,7 +606,7 @@ const styles = StyleSheet.create({
   },
   refreshIcon: {
     marginLeft: 190,
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     borderRadius: 30,
     padding: 3,
     alignItems: "center",
@@ -648,7 +648,7 @@ const styles = StyleSheet.create({
     padding: 20,
     width: "85%",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     height: 270, // Puedes ajustar esta altura según sea necesario
     maxHeight: "100%", // Opcional: limita el tamaño al 80% de la pantalla
     shadowColor: "#000",

@@ -7,6 +7,7 @@ import URL from "../Helper/URL";
 import APIManager from "../componentes/API/APIManager.jsx";
 import  {fetchJugadoresJuego, verificarJugadoresAmericana} from '../componentes/Activos/Americana/AmericanaApiService.js';
 import { useAuth } from '../screens/Auth/AuthContext';
+import colors from "../styles/colors";
 
   const BASE_ICON = require('../../assets/icon_no_profile.png');
   const BASE_URL = URL.IMAGENES;
@@ -174,7 +175,7 @@ const pasarAExtra = () => {
               disabled={!puedeSubir}
               style={[styles.controlButton, !puedeSubir && styles.controlButtonDisabled]}
             >
-              <Icon name="chevron-up" size={24} color={puedeSubir ? "#02B9FA" : "#ccc"} />
+              <Icon name="chevron-up" size={24} color={puedeSubir ? colors.primary : "#ccc"} />
             </TouchableOpacity>
 
             {/* Bajar jugador */}
@@ -183,12 +184,12 @@ const pasarAExtra = () => {
               disabled={!puedeBajar}
               style={[styles.controlButton, !puedeBajar && styles.controlButtonDisabled]}
             >
-              <Icon name="chevron-down" size={24} color={puedeBajar ? "#02B9FA" : "#ccc"} />
+              <Icon name="chevron-down" size={24} color={puedeBajar ? colors.primary : "#ccc"} />
             </TouchableOpacity>
 
             {/* Eliminar jugador */}
             <TouchableOpacity onPress={pasarAExtra} style={styles.deleteButton}>
-              <Icon name="remove" size={24} color="#02B9FA" />
+              <Icon name="remove" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
         )}
@@ -210,7 +211,7 @@ const pasarAExtra = () => {
               disabled={index === 0}
               style={[styles.controlButton, index === 0 && styles.controlButtonDisabled]}
             >
-              {/* <Icon name="chevron-up" size={20} color={index === 0 ? "#ccc" : "#02B9FA"} /> */}
+              {/* <Icon name="chevron-up" size={20} color={index === 0 ? "#ccc" : colors.primary} /> */}
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -218,7 +219,7 @@ const pasarAExtra = () => {
               disabled={index === jugadoresParejas.length - 1}
               style={[styles.controlButton, index === jugadoresParejas.length - 1 && styles.controlButtonDisabled]}
             >
-              {/* <Icon name="chevron-down" size={20} color={index === jugadoresParejas.length - 1 ? "#ccc" : "#02B9FA"} /> */}
+              {/* <Icon name="chevron-down" size={20} color={index === jugadoresParejas.length - 1 ? "#ccc" : colors.primary} /> */}
             </TouchableOpacity>
           </View>
         )}
@@ -253,7 +254,7 @@ const renderExtra = ({ item, index, drag }) => {
              onPress={() => moverJugadorDeExtrasAParejas(item)}
               style={styles.controlButton}
             >
-              <Icon name="chevron-up" size={24} color={"#02B9FA"} />
+              <Icon name="chevron-up" size={24} color={colors.primary} />
             </TouchableOpacity>
 
 
@@ -272,7 +273,7 @@ const renderExtra = ({ item, index, drag }) => {
        <Modal transparent={true} animationType="fade" visible={loading2}>
                                       <View style={styles.modalContainer2}>
                                         <View style={styles.modalContent2}>
-                                          <ActivityIndicator size="large" color="#02B9FA" />
+                                          <ActivityIndicator size="large" color={colors.primary} />
                                           <Text style={styles.loadingText}>
                                            Eliminando jugador...
                                           </Text>
@@ -639,7 +640,7 @@ const handleAgregarJugador = async (jugadorParaAgregar) => {
           <Text style={styles.resultadoTexto}>
             {item.nombre_completo || ''} ({item.usuario || ''})
           </Text>
-          <Icon name="add-circle" size={24} color="#02B9FA" />
+          <Icon name="add-circle" size={24} color={colors.primary} />
         </TouchableOpacity>
       );
     };
@@ -691,12 +692,12 @@ const handleGuardarJugadores = async () => {
      {searchTerm.trim() !== '' &&  (
         buscando ? (
           <View style={styles.addIcon}>
-            <ActivityIndicator size="small" color="#02B9FA" />
+            <ActivityIndicator size="small" color={colors.primary} />
           </View>
         ) : (
           <TouchableOpacity onPress={() => handleAgregarJugador({})}>
             <View style={styles.addIcon}>
-              <Icon name="add-circle" size={24} color="#02B9FA" />
+              <Icon name="add-circle" size={24} color={colors.primary} />
             </View>
           </TouchableOpacity>
         )
@@ -725,7 +726,7 @@ const handleGuardarJugadores = async () => {
    <View style={{ flex: 2 }}>
      
         {loadingJugadores ? (
-  <ActivityIndicator size="large" color="#02B9FA" style={{ marginTop: 20 }} />
+  <ActivityIndicator size="large" color={colors.primary} style={{ marginTop: 20 }} />
 ) : (
   <FlatList
     data={parejasAgrupadas}
@@ -748,7 +749,7 @@ const handleGuardarJugadores = async () => {
           Jugadores:
         </Text>
 {loadingJugadores ? (
-  <ActivityIndicator size="small" color="#02B9FA" style={{ marginTop: 10 }} />
+  <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 10 }} />
 ) : (
   <FlatList
     data={jugadoresExtras}
@@ -799,7 +800,7 @@ const styles = StyleSheet.create({
   height: '85%',
   backgroundColor: 'white',
   borderWidth: 2,
-  borderColor: '#00baff',
+  borderColor: colors.primary,
   borderRadius: 10,
   padding: 10,
   justifyContent: 'flex-start',
@@ -818,7 +819,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addButton: {
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     padding: 10,
     borderRadius: 10,
   },
@@ -883,7 +884,7 @@ const styles = StyleSheet.create({
   },
   jugador1: {
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
   },
   jugador2: {
     borderWidth: 3,
@@ -990,21 +991,21 @@ inputBuscar: {
 
 addIcon: {
   fontSize: 22,
-  color: '#02B9FA',
+  color: colors.primary,
   paddingHorizontal: -5,
 },
   modalContainer2: {
     flex: 1,
     // backgroundColor: "rgba(0, 0, 0, 0.5)",
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent2: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
@@ -1013,7 +1014,7 @@ addIcon: {
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: colors.primary,
   }, 
 });
 export default JugadoresModal;

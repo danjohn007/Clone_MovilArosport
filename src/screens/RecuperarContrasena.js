@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 12,
-    color: "#C70039",
+    color: "colors.error",
     marginTop: 2,
   },
   reenviarLink: {
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   reenviarText: {
-    color: "#00BAFF",
+    color: "colors.primary",
     fontSize: 14,
   },
 });

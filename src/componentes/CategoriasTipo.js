@@ -40,7 +40,7 @@ const CategoriasTipo = ({
         onPress={handlePress}
         disabled={disabled || isDisabled}
       >
-        <Ionicons name={iconName} size={24} color="#02B9FA" style={styles.icon2} />
+        <Ionicons name={iconName} size={24} color={colors.primary} style={styles.icon2} />
         <Text style={styles.textInput}>
           {selectedValue ? `Tipo de Jugada: ${selectedValue}` : placeholder}
         </Text>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     marginBottom: 10,
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 16,
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     padding: 20,
     width: '85%',
     maxHeight: '80%',
@@ -156,8 +156,8 @@ const styles = StyleSheet.create({
     width: '100%', // Ocupa todo el ancho de la modal
   },
   pillSelected: {
-    backgroundColor: '#02B9FA',
-    borderColor: '#02B9FA',
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
   },
   pillText: {
     fontSize: 14,

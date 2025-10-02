@@ -17,6 +17,7 @@ import Titulo from '../componentes/Titulo';
 import URL from "../Helper/URL";
 import APIManager from "../componentes/API/APIManager.jsx";
 import  {verificarJugadoresAmericana} from '../componentes/Activos/Americana/AmericanaApiService.js';
+import colors from "../styles/colors";
 
 const JUEGO_TIPOS = {
   AMERICANA: 1,
@@ -151,7 +152,7 @@ useEffect(() => {
         style={[styles.controlButton, index === 0 && styles.controlButtonDisabled]}
         disabled={index === 0}
       >
-        <Icon name="chevron-up" size={24} color={index === 0 ? "#ccc" : "#02B9FA"} />
+        <Icon name="chevron-up" size={24} color={index === 0 ? "#ccc" : colors.primary} />
       </TouchableOpacity>
 
       <TouchableOpacity 
@@ -159,7 +160,7 @@ useEffect(() => {
         style={[styles.controlButton, index === jugadoresLocales.length - 1 && styles.controlButtonDisabled]}
         disabled={index === jugadoresLocales.length - 1}
       >
-        <Icon name="chevron-down" size={24} color={index === jugadoresLocales.length - 1 ? "#ccc" : "#02B9FA"} />
+        <Icon name="chevron-down" size={24} color={index === jugadoresLocales.length - 1 ? "#ccc" : colors.primary} />
       </TouchableOpacity>
 
       <TouchableOpacity 
@@ -214,7 +215,7 @@ const renderPareja = ({ item, index }) => {
                 style={[styles.controlButton, index === 0 && styles.controlButtonDisabled]}
                 disabled={index === 0}
               >
-                <Icon name="chevron-up" size={24} color={index === 0 ? "#ccc" : "#02B9FA"} />
+                <Icon name="chevron-up" size={24} color={index === 0 ? "#ccc" : colors.primary} />
               </TouchableOpacity>
 
               <TouchableOpacity 
@@ -222,7 +223,7 @@ const renderPareja = ({ item, index }) => {
                 style={[styles.controlButton, index === jugadoresLocales.length - 1 && styles.controlButtonDisabled]}
                 disabled={index === jugadoresLocales.length - 1}
               >
-                <Icon name="chevron-down" size={24} color={index === jugadoresLocales.length - 1 ? "#ccc" : "#02B9FA"} />
+                <Icon name="chevron-down" size={24} color={index === jugadoresLocales.length - 1 ? "#ccc" : colors.primary} />
               </TouchableOpacity>
 
               <TouchableOpacity 
@@ -581,7 +582,7 @@ const renderPareja = ({ item, index }) => {
         <Text style={styles.resultadoTexto}>
           {item.nombre_completo || ''} ({item.usuario || ''})
         </Text>
-        <Icon name="add-circle" size={24} color="#02B9FA" />
+        <Icon name="add-circle" size={24} color={colors.primary} />
       </TouchableOpacity>
     );
   };
@@ -614,7 +615,7 @@ const renderPareja = ({ item, index }) => {
 )}
 
             {buscando ? (
-              <ActivityIndicator size="small" color="#02B9FA" />
+              <ActivityIndicator size="small" color={colors.primary} />
             ) : (
               searchTerm.trim() !== '' && (
                 <TouchableOpacity
@@ -644,7 +645,7 @@ const renderPareja = ({ item, index }) => {
           )}
 
           {loading ? (
-            <ActivityIndicator size="large" color="#02B9FA" />
+            <ActivityIndicator size="large" color={colors.primary} />
           ) : (
             <FlatList
               data={jugadoresLocales}
@@ -695,7 +696,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: 'white',
     borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     borderRadius: 15,
     padding: 20,
     width: '90%',
@@ -716,7 +717,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addButton: {
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     padding: 10,
     borderRadius: 10,
   },
@@ -775,7 +776,7 @@ const styles = StyleSheet.create({
   },
   jugador1: {
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
   },
   jugador2: {
     borderWidth: 3,

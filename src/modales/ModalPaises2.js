@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
+import colors from "../styles/colors";
   Modal,
   View,
   Text,
@@ -234,7 +235,7 @@ const styles = StyleSheet.create({
     height: '85%',
     backgroundColor: '#fff',
       borderWidth: 2,
-    borderColor: '#00baff',
+    borderColor: colors.primary,
     borderRadius: 16,
     padding: 20,
     shadowColor: '#000',
@@ -273,7 +274,7 @@ const styles = StyleSheet.create({
   },
   textoSeleccionado: {
     fontWeight: 'bold',
-    color: '#02B9FA',
+    color: colors.primary,
   },
   textoNormal: {
     color: '#333',
@@ -284,7 +285,7 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
   btnCerrar: {
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     marginTop: 10,

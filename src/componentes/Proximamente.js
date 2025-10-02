@@ -9,7 +9,7 @@ const Proximamente = ({ route }) => {
     titulo = "PRÓXIMAMENTE",
     nombreFeature = "",
     descripcion = "",
-    colorTitulo = "#02B9FA",
+    colorTitulo = "colors.primary",
     colorTexto = "#C9C9C9",
     mostrarLogo = true,
     mostrarBanner = true,

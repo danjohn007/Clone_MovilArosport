@@ -161,7 +161,7 @@ const handleShareInvitation = async () => {
             <Ionicons name="close-circle" size={30} color="#00bfff" />
           </TouchableOpacity>
           {/* <TouchableOpacity style={styles.closeIcon} onPress={closeModal}>
-          <Ionicons name="close" size={28} color="#02B9FAa" />
+          <Ionicons name="close" size={28} color={colors.primary} />
         </TouchableOpacity> */}
             <KeyboardAwareScrollView
               contentContainerStyle={{
@@ -216,7 +216,7 @@ modalContainer: {
   backgroundColor: 'rgba(255, 255, 255, 1)', // Fondo blanco translúcido
   borderRadius: 15,
   borderWidth: 2,
-  borderColor: "#02B9FA",
+  borderColor: colors.primary,
   padding: 20,
   width: "85%",
   shadowColor: "#000",
@@ -234,7 +234,7 @@ closeIcon: {
 titulo: {
   fontSize: 20,
   fontWeight: "bold",
-  color: "#02B9FA",
+  color: colors.primary,
   textAlign: "center",
   marginBottom: 20,
 },
@@ -254,7 +254,7 @@ inputContainer: {
   paddingHorizontal: 10,
   marginBottom: 15,
   borderWidth: 1,
-  borderColor: "#02B9FA",
+  borderColor: colors.primary,
   padding: 10
 },
 input: {
@@ -267,7 +267,7 @@ eyeIcon: {
   marginLeft: 10,
 },
 loginButton: {
-  backgroundColor: "#02B9FA",
+  backgroundColor: colors.primary,
   borderRadius: 20,
   paddingVertical: 12,
   alignItems: "center",
@@ -288,7 +288,7 @@ loginButtonText: {
     backgroundColor: 'white',
     borderRadius: 16,
     borderWidth: 2,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginBottom: 10,

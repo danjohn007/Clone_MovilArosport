@@ -10,7 +10,7 @@ const colors = {
     
     // Colores primarios
     "primary-black": "#000000",      // Negro
-    "primary-red": "#C70039",        // Rojo (errores)
+    "primary-red": "colors.error",        // Rojo (errores)
     "primary-blue": "#104eba",       // Azul principal (imagen/logo)
     "primary-dark": "#323232",       // Gris (logo/texto)
     
@@ -30,7 +30,7 @@ const colors = {
     "primary-black-20": "#CCCCCC",
     "primary-black-10": "#E6E6E6",
     
-    // Para primary-red (#C70039)
+    // Para primary-red (colors.error)
     "primary-red-80": "#E0335C",
     "primary-red-60": "#F0667F",
     "primary-red-40": "#F599A3",
@@ -102,7 +102,7 @@ const colors = {
     // Status Colors
     success: "#9ad64a",              // Maps to secondary-green
     warning: "#FFC107",
-    error: "#C70039",                // Maps to primary-red
+    error: "colors.error",                // Maps to primary-red
     info: "#104eba",                 // Maps to primary-blue
     
     // ============================================
@@ -124,7 +124,7 @@ const colors = {
     azulBot: "#2B92E5",
     azulClaro: "#2DFFFF",
     azulMarino: "#104eba",           // Now matches primary-blue
-    rojo: "#C70039",                 // Now matches primary-red
+    rojo: "colors.error",                 // Now matches primary-red
     urgente: "#D21313",
     urgentecnico: "#FF9238",
     azulfuerte: "#1E477A",

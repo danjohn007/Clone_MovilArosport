@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import colors from "../styles/colors";
 
 const UbiMostrar = ({ placeholder, selectedValue, iconName, onPress }) => {
   return (
     <View style={styles.inputContainer}>
       <TouchableOpacity style={styles.inputBox} onPress={onPress}>
-        <Ionicons name={iconName} size={24} color="#02B9FA" style={styles.icon}/>
+        <Ionicons name={iconName} size={24} color={colors.primary} style={styles.icon}/>
         <Text style={styles.textInput}>
           {selectedValue || placeholder}
         </Text>
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     paddingVertical: 10,
     paddingHorizontal: 15,
     width: '100%', // Cambiado de 88% a 100%

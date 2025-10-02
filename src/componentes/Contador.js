@@ -15,7 +15,7 @@ function Contador({ count, increment, decrement, onChange, disabled }) {
     <View style={styles.rowContainer}>
       {/* Bloque informativo a la izquierda */}
       <View style={styles.infoBox}>
-        <Ionicons name="layers-outline" size={22} color="#02B9FA" style={styles.icon} />
+        <Ionicons name="layers-outline" size={22} color={colors.primary} style={styles.icon} />
         <Text style={styles.infoText}>Número de canchas</Text>
       </View>
       {/* Bloque contador a la derecha */}
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     paddingHorizontal: 12,
     paddingVertical: Platform.OS === 'ios' ? 13 : 5,
     height: 55,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: '#02B9FA',
+    borderColor: colors.primary,
     paddingHorizontal: 6,
     height: 55,
     flex: 0.5, // Reduce el espacio para el número

@@ -76,8 +76,8 @@ const PENDIENTES = () => {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            colors={['#00baff']} // Android
-            tintColor="#00baff" // iOS
+            colors={[colors.primary]} // Android
+            tintColor="colors.primary" // iOS
           />
         }
       >

@@ -3,6 +3,7 @@ import { View, Modal, StyleSheet } from 'react-native';
 import CustomButton from '../componentes/Buttons';
 import Titulo from '../componentes/Titulo';
 import HistorialPartidos from '../componentes/HistorialPartidos';
+import colors from "../styles/colors";
 
 const ModalHistorialPartidos = ({ visible, closeModal, data }) => {
   return (
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     backgroundColor: 'rgba(255, 255, 255, 1)',
     borderWidth: 2,
-    borderColor: '#00BAFF',
+    borderColor: colors.primary,
     borderRadius: 15,
     padding: '5%',
     width: '90%',

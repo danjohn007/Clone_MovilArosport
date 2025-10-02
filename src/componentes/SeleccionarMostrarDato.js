@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const SeleccionarMostrarDato = ({ iconName, placeholder, onPress }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Ionicons name={iconName} size={24}  color="#02B9FA"  style={styles.icon} />
+      <Ionicons name={iconName} size={24}  color={colors.primary}  style={styles.icon} />
       <Text style={styles.text}>{placeholder}</Text>
     </TouchableOpacity>
   );
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 16,
         borderWidth: 3,
-        borderColor: '#02B9FA',
+        borderColor: colors.primary,
         paddingHorizontal: 10,
         paddingVertical: Platform.OS === 'ios' ? 15 : 15, // Ajuste uniforme para todos los dispositivos
         marginBottom: 10,

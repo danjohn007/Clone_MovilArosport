@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   loginButton: {
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     width: 205, // Establece el ancho a 205 píxeles
     paddingVertical: 12,
     borderRadius: 30,

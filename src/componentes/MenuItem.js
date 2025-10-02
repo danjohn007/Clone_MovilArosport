@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   activeMenuItem: {
-    color: "#02B9FA", // Color activo cuando está seleccionado
+    color: "colors.primary", // Color activo cuando está seleccionado
     borderBottomWidth: 2,
-    borderBottomColor: "#02B9FA",
+    borderBottomColor: "colors.primary",
     paddingBottom: 5,
   },
 });

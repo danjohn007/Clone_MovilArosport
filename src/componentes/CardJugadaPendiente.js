@@ -37,17 +37,17 @@ const CardJugadaPendiente = ({
       {/* Información detallada */}
       <View style={styles.infoContainer}>
         <View style={styles.infoRow}>
-          <Icon name="calendar-outline" size={16} color="#00baff" />
+          <Icon name="calendar-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{fecha}</Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Icon name="time-outline" size={16} color="#00baff" />
+          <Icon name="time-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>{hora}</Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Icon name="people-outline" size={16} color="#00baff" />
+          <Icon name="people-outline" size={16} color={colors.primary} />
           <Text style={styles.infoText}>Solicitudes pendientes:</Text>
         </View>
 
@@ -62,7 +62,7 @@ const CardJugadaPendiente = ({
             <Icon
               name="information-circle-outline"
               size={14}
-              color="#00baff"
+              color={colors.primary}
               style={styles.icon}
             />
             <Text style={styles.solicitudText}>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   invitacionContainer: {
     backgroundColor: "#ffffff",
     width: "95%",
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     borderWidth: 3,
     alignSelf: "center",
     marginBottom: 16,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   invitacionTitle: {
     fontSize: RFValue(14, 667),
     fontWeight: "700",
-    color: "#00baff",
+    color: "colors.primary",
     flex: 1,
     marginRight: 10,
     marginTop: -15,

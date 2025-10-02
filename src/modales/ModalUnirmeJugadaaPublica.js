@@ -10,6 +10,7 @@ import {
 import MapView, { Marker } from "react-native-maps";
 import Icon from "react-native-vector-icons/Ionicons";
 import { RFValue } from "react-native-responsive-fontsize";
+import colors from "../styles/colors";
 
 const ModalUnirmeJugadaaPublica = ({
   visible,
@@ -29,7 +30,7 @@ const ModalUnirmeJugadaaPublica = ({
             onPress={closeModal}
             activeOpacity={0.7}
           >
-            <Icon name="close" size={24} color="#00baff" />
+            <Icon name="close" size={24} color={colors.primary} />
           </TouchableOpacity>
         </View>
 
@@ -72,21 +73,21 @@ const ModalUnirmeJugadaaPublica = ({
             <Text style={styles.sectionTitle}>DETALLES</Text>
 
             <View style={styles.detailRow}>
-              <Icon name="tennisball-outline" size={16} color="#00baff" />
+              <Icon name="tennisball-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabel}>Nombre:</Text>
               <Text style={styles.detailValue}>{data?.nombre || "-"}</Text>
             </View>
 
             {ubicacion?.nombre_club && (
               <View style={styles.detailRow}>
-                <Icon name="business-outline" size={16} color="#00baff" />
+                <Icon name="business-outline" size={16} color={colors.primary} />
                 <Text style={styles.detailLabel}>Club:</Text>
                 <Text style={styles.detailValue}>{ubicacion.nombre_club}</Text>
               </View>
             )}
 
             <View style={styles.detailRow}>
-              <Icon name="location-outline" size={16} color="#00baff" />
+              <Icon name="location-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabel}>Dirección:</Text>
               <Text style={styles.detailValue}>
                 {ubicacion?.calle && ubicacion?.colonia && ubicacion?.cp
@@ -96,13 +97,13 @@ const ModalUnirmeJugadaaPublica = ({
             </View>
 
             <View style={styles.detailRow}>
-              <Icon name="trophy-outline" size={16} color="#00baff" />
+              <Icon name="trophy-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabel}>Categoría:</Text>
               <Text style={styles.detailValue}>{data?.categoria || "-"}</Text>
             </View>
 
             <View style={styles.detailRow}>
-              <Icon name="list-outline" size={16} color="#00baff" />
+              <Icon name="list-outline" size={16} color={colors.primary} />
               <Text style={styles.detailLabel}>Modalidad:</Text>
               <Text style={styles.detailValue}>{data?.modo_juego || "-"}</Text>
             </View>
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
   modalHeader: {
     flexDirection: "row",
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
     textTransform: "uppercase",
@@ -173,7 +174,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 8,
     textTransform: "uppercase",
   },
@@ -202,7 +203,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   errorText: {
-    color: "#c70039",
+    color: colors.error,
     fontSize: 14,
     textAlign: "center",
     marginVertical: 16,
@@ -220,7 +221,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 12,
     borderRadius: 8,
     flex: 1,

@@ -54,7 +54,7 @@ const ClubList = ({ clubsFiltrados, selectedDate }) => {
                   onPress={() => handleOpenModal(item.club.id_fraccionamientoclub)}
                   activeOpacity={0.8}
                 >
-                  <Ionicons name="map-outline" size={20} color="#00baff"/>
+                  <Ionicons name="map-outline" size={20} color={colors.primary}/>
                   <Text style={styles.buttonTextFooterUbi}>Ver ubicación</Text>
                 </TouchableOpacity>
 
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 8,
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     marginBottom: 20,
     overflow: "hidden",
     elevation: 5,
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   reservarBtn: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 8,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   buttonTextFooterUbi: {
-    color: "#00baff",
+    color: "colors.primary",
     fontSize: RFValue(12, 667),
     fontWeight: "600",
     marginLeft: 8,
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: "colors.primary",
     padding: 12,
     borderRadius: 8,
     flex: 1,

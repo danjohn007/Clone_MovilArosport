@@ -19,6 +19,7 @@ import APIManager from "../componentes/API/APIManager";
 import URL from "../Helper/URL";
 import Icon from "react-native-vector-icons/Ionicons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import colors from "../styles/colors";
 
 const Eventos = () => {
   const [selectedItem, setSelectedItem] = useState("torneos");
@@ -446,7 +447,7 @@ const styles = StyleSheet.create({
   jugadaContainer: {
     backgroundColor: "#ffffff",
     width: "100%",
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     borderWidth: 3,
     alignSelf: "center",
     marginBottom: 16,
@@ -491,7 +492,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginBottom: 16,
     backgroundColor: "#ffffff",
-    borderColor: "#02B9FA",
+    borderColor: colors.primary,
     borderWidth: 3,
     borderRadius: 8,
     padding: 7,

@@ -8,7 +8,7 @@ import URL from "../Helper/URL";
 const { width } = Dimensions.get("window");
 const scale = (size) => (width / 375) * size;
 const colors = {
-  azulMarino: "#00baff",
+  azulMarino: "colors.primary",
   blanco: "#fff",
   grisTexto: "#808191"
 };

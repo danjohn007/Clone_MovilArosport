@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff", // Fondo gris claro igual que Categorias.js
     borderRadius: 16,
     borderWidth: 3,
-    borderColor: "#00baff", // Borde azul
+    borderColor: "colors.primary", // Borde azul
     marginHorizontal: 5,
     paddingVertical: 8,
     paddingHorizontal: 8,
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 16,
     borderWidth: 1,
-    borderColor: "#00baff", // Borde azul
+    borderColor: "colors.primary", // Borde azul
     marginTop: 4,
     width: "100%",
     alignItems: "center",
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   modalContent: {
     width: "70%",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     backgroundColor: "#fff",
     borderRadius: 12,
     padding: 10,
@@ -225,8 +225,8 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   pillOptionSelected: {
-    backgroundColor: '#00BAFF',
-    borderColor: '#00BAFF',
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
   },
   pillOptionText: {
     fontSize: 14,

@@ -222,7 +222,7 @@ const JugadoresParejasr = ({
                   <Icon
                     name="chevron-up"
                     size={24}
-                    color={puedeSubir ? "#02B9FA" : "#E0E0E0"}
+                    color={puedeSubir ? "colors.primary" : "#E0E0E0"}
                   />
                 </TouchableOpacity>
       
@@ -236,7 +236,7 @@ const JugadoresParejasr = ({
                   <Icon
                     name="chevron-down"
                     size={24}
-                    color={puedeBajar ? "#02B9FA" : "#E0E0E0"}
+                    color={puedeBajar ? "colors.primary" : "#E0E0E0"}
                   />
                 </TouchableOpacity>
 
@@ -257,7 +257,7 @@ const JugadoresParejasr = ({
           <Modal transparent={true} animationType="fade" visible={loading2}>
             <View style={styles.loadingOverlay}>
               <View style={styles.loadingModal}>
-                <ActivityIndicator size="large" color="#02B9FA" />
+                <ActivityIndicator size="large" color={colors.primary} />
                 <Text style={styles.loadingText}>Eliminando jugador...</Text>
               </View>
             </View>
@@ -510,7 +510,7 @@ const JugadoresParejasr = ({
         <Text style={styles.resultadoTexto}>
           {item.nombre_completo || ""} ({item.usuario || ""})
         </Text>
-        <Icon name="add-circle" size={24} color="#02B9FA" />
+        <Icon name="add-circle" size={24} color={colors.primary} />
       </TouchableOpacity>
     );
   };
@@ -681,12 +681,12 @@ const JugadoresParejasr = ({
                 {searchTerm.trim() !== "" &&
                   (buscando ? (
                     <View style={styles.addIcon}>
-                      <ActivityIndicator size="small" color="#02B9FA" />
+                      <ActivityIndicator size="small" color={colors.primary} />
                     </View>
                   ) : (
                     <TouchableOpacity onPress={() => handleAgregarJugador({})}>
                       <View style={styles.addIcon}>
-                        <Icon name="add-circle" size={24} color="#02B9FA" />
+                        <Icon name="add-circle" size={24} color={colors.primary} />
                       </View>
                     </TouchableOpacity>
                   ))}
@@ -715,7 +715,7 @@ const JugadoresParejasr = ({
             {loadingJugadores ? (
               <ActivityIndicator
                 size="large"
-                color="#02B9FA"
+                color={colors.primary}
                 style={{ marginTop: 20 }}
               />
             ) : (
@@ -864,7 +864,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addButton: {
-    backgroundColor: "#02B9FA",
+    backgroundColor: "colors.primary",
     padding: 10,
     borderRadius: 10,
   },
@@ -929,7 +929,7 @@ const styles = StyleSheet.create({
   },
   jugador1: {
     borderWidth: 3,
-    borderColor: "#02B9FA",
+    borderColor: "colors.primary",
   },
   jugador2: {
     borderWidth: 3,
@@ -1036,21 +1036,21 @@ const styles = StyleSheet.create({
   },
   addIcon: {
     fontSize: 22,
-    color: "#02B9FA",
+    color: "colors.primary",
     paddingHorizontal: -5,
   },
   modalContainer2: {
     flex: 1,
     // backgroundColor: "rgba(0, 0, 0, 0.5)",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     justifyContent: "center",
     alignItems: "center",
   },
   modalContent2: {
     backgroundColor: "white",
     borderWidth: 2,
-    borderColor: "#00baff",
+    borderColor: "colors.primary",
     padding: 24,
     borderRadius: 10,
     alignItems: "center",
@@ -1059,7 +1059,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     fontWeight: "bold",
-    color: "#00baff",
+    color: "colors.primary",
   },
   //estilos cartas jugadores
   jugadorCard: {
@@ -1075,7 +1075,7 @@ const styles = StyleSheet.create({
   },
   jugador1: {
     borderLeftWidth: 4,
-    borderLeftColor: "#02B9FA",
+    borderLeftColor: "colors.primary",
   },
   jugador2: {
     borderLeftWidth: 4,
@@ -1135,7 +1135,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: "#02B9FA",
+    color: "colors.primary",
     fontWeight: "500",
   },
   //estilos parejas
