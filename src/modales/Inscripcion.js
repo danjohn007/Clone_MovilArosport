@@ -25,6 +25,7 @@ import CategoriasTorneo from "../componentes/CategoriasTorneo";
 import { useStripe } from "@stripe/stripe-react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import colors from "../styles/colors";
 
 const RETURN_URL = "prorally-movil://stripe-redirect";
 
@@ -680,7 +681,7 @@ const hayEspaciosDisponibles = opcionesDisponibles.length > 0;
                 onPress={closeModal}
                 activeOpacity={0.7}
               >
-                <Icon name="close" size={24} color="#00baff" />
+                <Icon name="close" size={24} color={colors.primary} />
               </TouchableOpacity>
             </View>
 
@@ -705,13 +706,13 @@ const hayEspaciosDisponibles = opcionesDisponibles.length > 0;
                 <Text style={styles.sectionTitle}>JUGADORES</Text>
 
                 <View style={styles.playerCard}>
-                  <Icon name="person-outline" size={18} color="#00baff" />
+                  <Icon name="person-outline" size={18} color={colors.primary} />
                   <Text style={styles.playerLabel}>Jugador 1:</Text>
                   <Text style={styles.playerName}>{nombreJugador1}</Text>
                 </View>
 
                 <View style={styles.inputContainer}>
-                  <Icon name="person-add-outline" size={18} color="#00baff" />
+                  <Icon name="person-add-outline" size={18} color={colors.primary} />
                   <TextInput
                     style={styles.input}
                     placeholder="Buscar jugador 2..."
@@ -844,13 +845,13 @@ const hayEspaciosDisponibles = opcionesDisponibles.length > 0;
                 <Text style={styles.summaryTitle}>RESUMEN DE INSCRIPCIÓN</Text>
 
                 <View style={styles.detailRow}>
-                  <Icon name="trophy-outline" size={16} color="#00baff" />
+                  <Icon name="trophy-outline" size={16} color={colors.primary} />
                   <Text style={styles.detailLabel}>Torneo:</Text>
                   <Text style={styles.detailValue}>{torneoNombre}</Text>
                 </View>
 
                 <View style={styles.detailRow}>
-                  <Icon name="calendar-outline" size={16} color="#00baff" />
+                  <Icon name="calendar-outline" size={16} color={colors.primary} />
                   <Text style={styles.detailLabel}>Fechas:</Text>
                   <Text style={styles.detailValue}>
                     {formatoFecha(torneoFechaI)} - {formatoFecha(torneoFechaF)}
@@ -858,13 +859,13 @@ const hayEspaciosDisponibles = opcionesDisponibles.length > 0;
                 </View>
 
                 <View style={styles.detailRow}>
-                  <Icon name="location-outline" size={16} color="#00baff" />
+                  <Icon name="location-outline" size={16} color={colors.primary} />
                   <Text style={styles.detailLabel}>Club:</Text>
                   <Text style={styles.detailValue}>{torneoFracci}</Text>
                 </View>
 
                 <View style={styles.detailRow}>
-                  <Icon name="people-outline" size={16} color="#00baff" />
+                  <Icon name="people-outline" size={16} color={colors.primary} />
                   <Text style={styles.detailLabel}>Pareja:</Text>
                   <Text style={styles.detailValue}>
                     {nombreJugador1} y{" "}
@@ -873,7 +874,7 @@ const hayEspaciosDisponibles = opcionesDisponibles.length > 0;
                 </View>
 
                 <View style={styles.detailRow}>
-                  <Icon name="pricetag-outline" size={16} color="#00baff" />
+                  <Icon name="pricetag-outline" size={16} color={colors.primary} />
                   <Text style={styles.detailLabel}>Categoría:</Text>
                   <Text style={styles.detailValue}>
                     {selectedCategoria || "Por seleccionar"}
@@ -881,7 +882,7 @@ const hayEspaciosDisponibles = opcionesDisponibles.length > 0;
                 </View>
 
                 <View style={styles.detailRow}>
-                  <Icon name="card-outline" size={16} color="#00baff" />
+                  <Icon name="card-outline" size={16} color={colors.primary} />
                   <Text style={styles.detailLabel}>Método:</Text>
                   <Text style={styles.detailValue}>
                     {selectedMetodoPago || "Por seleccionar"}
@@ -929,7 +930,7 @@ const hayEspaciosDisponibles = opcionesDisponibles.length > 0;
         {/* Modal de carga */}
         {loading2 && (
           <View style={styles.loadingOverlay}>
-            <ActivityIndicator size="large" color="#00baff" />
+            <ActivityIndicator size="large" color={colors.primary} />
             <Text style={styles.loadingText}>Procesando inscripción...</Text>
           </View>
         )}
@@ -955,7 +956,7 @@ const styles = StyleSheet.create({
     maxHeight: "90%",
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "#00baff",
+    borderColor: colors.primary,
   },
 
   // Encabezado
@@ -971,7 +972,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#00baff",
+    color: colors.primary,
     textAlign: "center",
     flex: 1,
   },
@@ -992,7 +993,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 8,
     textTransform: "uppercase",
   },
@@ -1073,7 +1074,7 @@ const styles = StyleSheet.create({
   summaryTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
     marginBottom: 12,
     textAlign: "center",
   },
@@ -1109,7 +1110,7 @@ const styles = StyleSheet.create({
   priceLabel: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#00baff",
+    color: colors.primary,
   },
   priceValue: {
     fontSize: 16,
@@ -1122,7 +1123,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00baff",
+    backgroundColor: colors.primary,
     padding: 14,
     borderRadius: 8,
     marginBottom: 16,
@@ -1182,7 +1183,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 12,
-    color: "#00baff",
+    color: colors.primary,
     fontSize: 14,
     fontWeight: "500",
   },

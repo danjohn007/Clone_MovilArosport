@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'; // Ensure this import is included
 import { faMedal } from '@fortawesome/free-solid-svg-icons';
+import colors from '../styles/colors';
 
 
 import Principal from './screens/Principal';
@@ -199,7 +200,7 @@ const styles = StyleSheet.create({
     width: 41,
     height: 41,
     borderRadius: 25,
-    backgroundColor: '#02B9FA',
+    backgroundColor: colors.primary,
     top: -5,
     justifyContent: 'center',
     alignItems: 'center',

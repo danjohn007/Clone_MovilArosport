@@ -62,11 +62,12 @@ const colors = {
     // CONVENIENCE ALIASES (easier to use)
     // ============================================
     
-    // Primary Brand Colors (mapped to tailwind config)
-    primary: "#104eba",              // Maps to primary-blue
-    primaryLight: "#1a60c2",         // Maps to primary-blue-80
-    primaryDark: "#042257ff",        // Maps to primary-blue-dark
-    secondary: "#9ad64a",            // Maps to secondary-green
+    // Primary Brand Colors (unified with web tailwind config)
+    // The mobile app now uses the same primary-blue as the web (#104eba)
+    primary: "#104eba",              // Unified primary-blue (web & mobile)
+    primaryLight: "#1a60c2",         // primary-blue-80
+    primaryDark: "#042257ff",        // primary-blue-dark
+    secondary: "#9ad64a",            // secondary-green
     
     // Basic Colors
     white: "#FFFFFF",

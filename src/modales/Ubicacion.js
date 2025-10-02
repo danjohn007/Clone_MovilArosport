@@ -12,6 +12,7 @@ import MapView, { Marker } from "react-native-maps";
 import CustomButton from "../componentes/Buttons";
 import { Ionicons } from "@expo/vector-icons"; // Importación nueva
 import APIManager from "../componentes/API/APIManager";
+import colors from "../styles/colors";
 
 const Ubicacion = ({ visible, closeModal, id, tipo = "fraccionamiento" }) => {
   const [direccion, setDireccion] = useState(null);
@@ -211,7 +212,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   errorText: {
-    color: "#c70039",
+    color: colors.error,
     fontSize: 13,
     fontFamily: "Poppins-Medium",
   },
